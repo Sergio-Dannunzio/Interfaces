@@ -23,13 +23,17 @@ time, mark, audio, video {
 
 body{
     font-family:  sans-serif;
+    color: #CFCFCF;
 }
 
 /*************HEADER***********************/
 header{
+    position: sticky;
+    top: 0px;
     background-color: #28043A;
     height: 81px;
     width: 100%;
+    z-index: 5;
 }
 
 input{
@@ -44,7 +48,7 @@ input{
     color: #CFCFCF;
     font-size: 13px;
     padding-left: 13px;
-    font-family: 'Raleway', sans-serif;
+    font-family: sans-serif;
 }
 
 .container{
@@ -107,7 +111,6 @@ input{
 /*************MAIN***********************/
 main{
     background-color: #100117;
-
 }
 
 .containerMain{
@@ -134,10 +137,33 @@ h1{
 
 }
 
+.logoMortal{
+    max-width: 400px;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+
+.info{
+    width: 150px;
+    height: 35px;
+    position: absolute;
+    top: 420px;
+    left: 280px;
+    background-color: #644DA4;
+    border-radius: 16px;
+    border: none;
+}
+
+.info p {
+    color: #F4F4F5;
+    font-weight: 600;
+}
+
 .containerCard{
    padding-right: 16px;
    width:  348px;
-   height: 255px;
+   height: 260px;
    line-height:0;
 }
 
@@ -146,7 +172,24 @@ h1{
     flex-direction: row;
     margin-top: 16px;
     overflow: scroll;
+    list-style: none;
 }
+
+
+.carrousel::-webkit-scrollbar{
+    width: 2px;
+    height: 8px; 
+}
+
+.carrousel::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.carrousel::-webkit-scrollbar-thumb {
+    background: #581578;
+    border-radius: 8px;
+  }
 
 .card{
     width:  348px;
@@ -155,6 +198,38 @@ h1{
     border-radius: 0px 0px 25px 25px;
     display: flex;
     justify-content: end;
+}
+
+.cardWithName{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end; 
+}
+
+.cardPrice .precio {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 24px;
+    padding-right: 8px;
+}
+
+
+.cardWithName h1 {
+    padding-left: 16px;
+    padding-top: 24px;
 }
 
 .containerImg{
@@ -174,9 +249,15 @@ h1{
     overflow: hidden;
 }
 
+.imgCarrouselWidthJuego{
+    max-width: 360px;
+    overflow: hidden;  
+}
+
 .btnJugar{
     background-color: #18F58B;
     border-radius: 25px;
+    border: none;
     height: 35px;
     width: 90px;
     margin-top: 8px;
@@ -185,9 +266,12 @@ h1{
 }
 
 .btnJugar p{
-    padding-top: 16px;
+    font-size: 16px;
     font-weight:bold;
 }
+
+
+/******FOOTER************************/
 
 footer{
     width: 100%;
@@ -207,7 +291,18 @@ footer{
 }
 footer .containerFooter .seccion {
     padding: 0px 60px;
+    
 }
+.seccionSiguenos{
+    padding: 0px 60px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 
 footer .containerFooter .seccion h1{
     padding: 0px ;
@@ -243,8 +338,7 @@ hr{
 .logoRedes{
     width: 24px;
     height: 24px;
-    padding: 8px 16px;
-    padding-bottom: 24px;
+    padding: 24px 16px;
     overflow: hidden;
 }
 
@@ -257,4 +351,136 @@ hr{
     display: flex;
     flex-direction: row;
     justify-self: center;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/********4 en linea*****************/
+
+.breadCrums{
+    background-color:#581578;
+    width: 100%;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedorIMGtexto{
+    display: flex;
+    flex-direction: row;
+    padding-left: 32px;
+}
+
+.contenedorIMGjuego{
+    width: 133px;
+    height: 78px;
+    overflow: hidden;
+}
+
+
+.imgjuego{
+    width: 133px;
+    height: 80px;
+}
+.contendedorBreadCrums{
+    display: flex;
+    flex-direction: column;
+
+    padding-left:  24px;
+}
+
+.contendedorBreadCrums p {
+    color: #CFCFCF;
+}
+
+
+.contendedorBreadCrums h1 {
+   padding-top: 8px;
+}
+
+
+.contenedorJuego{
+    width: 1230px;
+    height: 640px;
+    background-color:#581578;
+    margin:0px 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juego{
+    display: flex;
+    width: 100%;
+    height: 640px;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.containerRedesJuego{
+
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding-right: 80px;
+}
+
+.logoRedesJuego{
+    width: 40px;
+    height: 40px;
+    padding: 16px 16px;
+    overflow: hidden;
+}
+
+.redesJuego{
+    width: 40px;
+    height: 40px;
+}
+
+.facebook{
+    width: 35px;
+    height: 35px;
+}
+
+.contendedorGaleria{
+    display: flex;
+    justify-content: center;
+}
+.galeria{
+    width: 82%;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.contenedorTexto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 150px;
+}
+
+.contenedorTexto p {
+    padding-top: 16px;
+}
+
+
+.contenedorComentarios{
+    background-color: #3F1A52;
+    width: 100%;
+    height: 100%;
+}
+
+.comentarioGlobal{
+    background-color: red;
+    width: 50%;
 }
