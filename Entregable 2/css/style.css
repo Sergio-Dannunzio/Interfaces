@@ -473,14 +473,186 @@ hr{
     padding-top: 16px;
 }
 
+.comentariosH1{
+    padding-left: 148px;
+}
 
 .contenedorComentarios{
     background-color: #3F1A52;
-    width: 100%;
-    height: 100%;
+    width: 1230;
+    height:99px;
+    margin: 16px 148px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .comentarioGlobal{
-    background-color: red;
-    width: 50%;
+    background-color: #644DA4;
+    width: 1072px;
+    height: 67px;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 84px;
+}
+
+.usuarioComentario{
+    margin: 24px;
+    width: 54px;
+    height: 54px;
+    margin-right: 32px;
+}
+
+.divideComentario{
+    height: 2px;
+    width: 1216px;
+    background-color: #F4F4F5
+}
+
+.comentariosOtros{
+    background-color: #3F1A52;
+    width: 1230;
+    height:99px;
+    margin: 16px 148px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedorIMGComentario{
+    display: flex;
+    flex-direction: row;
+}
+
+.contendorDatos h1{
+    margin-top: 16px;
+    padding: 0px;
+
+}
+.contenedoNombreFecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedoNombreFecha p{
+    margin: 22px;
+    padding: 0px;
+}
+
+.meGusta{
+    display: flex;
+    flex-direction: row;
+    margin: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.meGusta p{
+    margin-right: 16px;
+}
+
+/*************LANZAMIENTO******************/
+
+.heroFondo{
+    width: 100%;
+    height: 621px;
+    overflow: hidden;
+}
+.fondo{
+    width: 100%;
+}
+.contenedorLogoLanzamiento{
+    width: 630px;
+}
+.logoMortalLanzamiento{
+    width: 700px;
+    position: absolute;
+    top: 100px;
+    left: 410px;
+}
+
+.fuego{
+    width: 940px;
+}
+
+.fuegoimg{
+    width: 940px;
+    position: absolute;
+    top: 444px;
+    left: 300px;
+}
+
+.personaje{
+    width: 1036px;
+}
+
+.personajeimg{
+    width: 1040px;
+    position: absolute;
+    top: 269px;
+    left: 348px;
+}
+
+.contenedorHistoria{
+   
+    height: 406px;
+    margin: 24px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    background-color: #371C7C;
+    opacity: .6;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia{
+    width: 986px;
+    height: 284px;
+    overflow: scroll;
+
+}
+
+.historia::-webkit-scrollbar{
+    width: 8px;
+    height: 0px; 
+}
+
+.historia::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.historia::-webkit-scrollbar-thumb {
+    background: #F4F4F5;
+    border-radius: 8px;
+}
+
+.historia p {
+    color: #F4F4F5;
+}
+
+.containerImgFondoPJ{
+    width: 174px;
+    height: 231px;
+    overflow: hidden;
+    margin-left: 24px;
+}
+
+.fondoPj{
+    width: 174px;
+    height: 231px;
+    opacity: 1; 
+}
+
+.containerImgPJ{
+    width: 174px;
+    height: 187px;
+    overflow: hidden;
+    position: static;
+    top: 0px;
 }
