@@ -8,36 +8,84 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>Juegos arcade</title>
+    <script src="logica.js"></script>
 </head>
 <body>
-
     <header>
-
+        
         <div class="container">
             <div class="img">
-               <img class="menu" src="img/menu.png" alt="">
-               <img class="logo" src="img/logo.png" alt="">
+                <!--Sergio-->
+                <button id="botonCategorias">
+                    <img class="menu" src="img/menu.png" alt="">
+                </button>
+                <!--Sergio-->
+                <img class="logo" src="img/logo.png" alt="">
             </div>
             <div class="buscador">
                 <input type="text" placeholder="Buscar juegos" name="" id="">
                 <img class="buscadorImg" src="img/buscador.png" alt="">
             </div>
             <div class="menuUsuario">
-                <div class="usuario">
+                <div id="btnUsuario" class="usuario">
                     <img class="logoUsuario" src="img/usuario.png" alt="">
                 </div>
-                <div>
+                <div id="flecha">
                     <img class="flecha" src="img/ordenar-abajo.png" alt="">
                 </div>
             </div>
         </div>
-
+        
     </header>
-
-    <main>
+    <div class="loader noMostrar" id="spinner"></div>
+    <!--Sergio-->
+    <div id="categorias" class="noMostrar">
+        <div class="categorias">
+            
+            <ul class="listaCategorias">
+                <li>Acción</li>
+                <li>Aventura</li>
+                <li>Carreras</li>
+                <li>Clásicos</li>
+                <li>Deportes</li>
+            <li>Escape</li>
+            <li>Estrategia</li>
+            <li>Educativos</li>
+            <li>Puzzle</li>
+            <li>Pool</li>
+            <li>Multijugador</li>
+            <li>
+                <div class="containerRedes">
+                    <div class="logoRedes">
+                        <img class="redes" src="img/facebook.png" alt="">
+                    </div>
+                    <div class="logoRedes">
+                        <img class="redes" src="img/gorjeo.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div id="usuarioCategorias" class="noMostrar">
+        <ul class="listaUsuarioCategorias">
+            <div>
+                <img class="logoUsuario" src="img/usuario.png" alt="">
+                <p>Nombre</p>
+            </div>
+            <hr>
+            <li>Notificaciones</li>
+            <li>Tienda</li>
+            <li>Soporte</li>
+            <li>Configuración</li>
+            <li>Cerrar Sesión</li>
+        </ul>
+    </div>
+    <!--Sergio-->
+    <main id="main">
         <div class="containerMain">
             <h1>Próximos estrenos</h1>
             <div class="containerMortal">
@@ -47,13 +95,13 @@
                 <img class="logoMortal" src="img/logoMortalKombat.png" alt="">
             </div>
             <a href="lanzamiento.html"> <button class="info"> <p> Más información</p> </button></a>
-
+            
             <div >
                 <img src="/img/imgJuego.svg" alt="">
             </div>
             <h1>Destacados</h1>
             <div class="carrouselDiv">
-
+                
                 <ul class="carrousel">
                     <li>
                         <div class="containerCard">
@@ -62,7 +110,7 @@
                             </div>
                             <div class="cardWithName">
                                 <h1>4 en línea</h1>
-                               <a href="juego.html"> <button class="btnJugar"><p>Jugar</p></button></a>
+                                <a href="juego.html"> <button class="btnJugar"><p>Jugar</p></button></a>
                             </div>
                         </div>
                     </li>
@@ -83,7 +131,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$12.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -91,11 +139,11 @@
                         <div class="containerCard">
                             <div class="containerImg">
                                 <img class="imgCarrouselHeigh" src="img/carrousel/1/amongus.png" alt="">
-
+                                
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$3.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -103,7 +151,7 @@
                         <div class="containerCard">
                             <div class="containerImg">
                                 <img class="imgCarrouselWidth" src="img/carrousel/1/plantasVSzombies.png" alt="">
-
+                                
                             </div>
                             <div class="card">
                                 <button class="btnJugar"><p>Jugar</p></button>
@@ -114,7 +162,7 @@
                         <div class="containerCard">
                             <div class="containerImg">
                                 <img class="imgCarrouselWidth" src="img/carrousel/1/fuegoyagua.png" alt="">
-
+                                
                             </div>
                             <div class="card">
                                 <button class="btnJugar"><p>Jugar</p></button>
@@ -125,7 +173,7 @@
                         <div class="containerCard">
                             <div class="containerImg">
                                 <img class="imgCarrouselWidth" src="img/carrousel/1/pacman.png" alt="">
-
+                                
                             </div>
                             <div class="card">
                                 <button class="btnJugar"><p>Jugar</p></button>
@@ -136,11 +184,11 @@
                         <div class="containerCard">
                             <div class="containerImg">
                                 <img class="imgCarrouselHeigh" src="img/carrousel/1/fornite.png" alt="">
-
+                                
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$7.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -167,7 +215,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$8.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -178,7 +226,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$3.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -200,7 +248,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$7.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -223,7 +271,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$11.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -280,7 +328,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$2.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -303,7 +351,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$12.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -315,7 +363,7 @@
                             </div>
                             <div class="cardPrice">
                                 <p class="precio">$8.00</p>
-                                <button class="btnJugar"><p>Jugar</p></button>
+                                <button class="btnJugar"><p>Comprar</p></button>
                             </div>
                         </div>
                     </li>
@@ -400,6 +448,5 @@
             </footer>
     </main>
 
-    
 </body>
 </html>
