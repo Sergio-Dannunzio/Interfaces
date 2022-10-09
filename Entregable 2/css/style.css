@@ -124,6 +124,9 @@ h1{
     padding-top: 32px;
 
 }
+.destacados{
+    padding-top: 12px !important;  
+}
 
 .containerMortal{
     width: 100%;
@@ -134,7 +137,7 @@ h1{
 }
 
 .imgMortal{
-    max-width: 90%;
+    width: 91%;
 
 }
 
