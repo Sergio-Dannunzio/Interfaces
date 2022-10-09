@@ -47,6 +47,7 @@ input{
 
 ::placeholder {
     color: #CFCFCF;
+    font-weight: bold;
     font-size: 13px;
     padding-left: 13px;
     font-family: sans-serif;
@@ -148,25 +149,47 @@ h1{
     left: 150px;
 }
 
-.info{
+.btnInfo {
+    font-weight: 600;
+    background: #644DA4;
+    border-radius: 16px;
     width: 150px;
     height: 35px;
+    color: #F4F4F5;
+    border: 0.25rem solid #644DA4;
     position: absolute;
     top: 420px;
-    left: 280px;
-    background-color: #644DA4;
-    border-radius: 16px;
-    border: none;
-}
-/******Sergio************************/
-.info:hover{
-    background-color: #957BDC;
-}
-/******Sergio************************/
-.info p {
-    color: #F4F4F5;
-    font-weight: 600;
-}
+    left: 250px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .btnInfo:hover {
+    color: #644DA4;
+  }
+  .btnInfo::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  
+  button[class^="btnInfo"]::after {
+    transition: all 0.3s ease;
+  }
+  
+  .btnInfo.info::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+  }
+  .btnInfo.info:hover::after {
+    transform: scale(1, 1) rotate(0deg);
+  }
 
 .containerCard{
    padding-right: 16px;
@@ -230,7 +253,7 @@ h1{
     color: #F4F4F5;
     font-size: 16px;
     font-weight: 700;
-    padding-top: 24px;
+    padding-top: 26px;
     padding-right: 8px;
 }
 
@@ -269,7 +292,7 @@ h1{
     width: 90px;
 }
 
-.btnJugar{
+.btnComprar{
     background-color: #18F58B;
     border-radius: 25px;
     border: none;
@@ -279,15 +302,48 @@ h1{
     margin-right: 21px;
     text-align: center;
 }
-.btnJugar:hover{
-    background-color: #B7FFDC;
-
+.comprar {
+    border-color: #18F58B;
+    box-shadow: 0 0 40px 40px  #18F58B inset, 0 0 0 0 #18F58B;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .comprar:hover {
+    box-shadow: 0 0 10px 0  #18F58B inset, 0 0 10px 4px  #18F58B;
+  }
+.btnComprar p{
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
 }
-/******Sergio************************/
+
+.btnJugar{
+    background-color: #B7FFDC;
+    border-radius: 25px;
+    border: solid 2px #B7FFDC;
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    margin-right: 21px;
+    text-align: center;
+}
 .btnJugar p{
     font-size: 16px;
     font-weight:bold;
+    color: #100117;
 }
+
+.jugar {
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .jugar:hover {
+    box-shadow: 0 0 10px 0  #B7FFDC inset, 0 0 10px 4px  #18F58B;
+  }
+
+  .jugar:hover  p {
+    color: #100117;
+  }
 
 
 /******FOOTER************************/
@@ -575,6 +631,59 @@ hr{
 
 /*************LANZAMIENTO******************/
 
+
+.btn_trailer{
+    font-size: 16px;
+    font-weight: bold;
+    background: #FFCE31;
+    color: #100117;
+    border: 0.25rem solid #FFCE31;
+    border-radius: 16px;
+    width: 128px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 652px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .btn_trailer:hover {
+    color: #100117;
+  }
+  .btn_trailer::after {
+    content: "";
+    background: #FFE38A;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  
+  
+  button[class^="btn"]::after {
+    transition: all 0.3s ease;
+  }
+  button[class^="btn"]:hover::after {
+    transition: all 0.3s ease-out;
+  }
+  
+  .btn_trailer::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+  }
+  .btn_trailer:hover::after {
+    transform: scale(1, 1);
+  }
+  
 .mainLanzamiento{
     height: 2461px;
 }
@@ -590,10 +699,10 @@ hr{
     width: 630px;
 }
 .logoMortalLanzamiento{
-    width: 700px;
+    width: 630px;
     position: absolute;
     top: 100px;
-    left: 410px;
+    left: 438px;
 }
 
 .fuego{
