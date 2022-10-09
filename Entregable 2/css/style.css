@@ -572,6 +572,9 @@ hr{
 
 /*************LANZAMIENTO******************/
 
+.mainLanzamiento{
+    height: 2461px;
+}
 .heroFondo{
     width: 100%;
     height: 621px;
@@ -618,8 +621,7 @@ hr{
     margin: 24px;
     margin-top: 16px;
     margin-bottom: 0px;
-    background-color: #371C7C;
-    opacity: .6;
+    background-color: rgb(55, 28, 124, 0.6);
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -630,7 +632,7 @@ hr{
     width: 986px;
     height: 284px;
     overflow: scroll;
-
+    background-color: transparent;
 }
 
 .historia::-webkit-scrollbar{
@@ -649,12 +651,13 @@ hr{
 }
 
 .historia p {
-    color: #F4F4F5;
+    color: #CFCFCF;
+    background-color: transparent;
 }
 
 .containerImgFondoPJ{
     width: 174px;
-    height: 231px;
+    height: 240px;
     overflow: hidden;
     margin-left: 24px;
 }
@@ -672,6 +675,96 @@ hr{
     position: static;
     top: 0px;
 }
+
+.cardFeatureEND{
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardFeatureEND2{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 200px;
+}
+
+.cardFeatureSTART{
+    display: flex;
+    justify-content: start;
+    position: relative;
+    bottom: 100px;
+}
+
+.cardFeature{
+    background-color: rgb(55, 28, 124, 0.6);
+    width: 805px;
+    height: 281px;
+    border-radius: 15px;
+    margin-top: 131px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardFeature div{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardFeature div p {
+    padding-top: 24px;
+    margin-left: 24px;
+}
+
+.cardFeature div h1 {
+    padding-top: 16px;
+    margin-left: 32px;
+    text-align: center;
+}
+
+.imgFeature{
+    height: 372px;
+    position: relative;
+    bottom: 91px;
+    border-radius: 15px;
+}
+
+.imgFeature2{
+    height: 468px;
+    position: relative;
+    bottom: 125.5px;
+}
+
+.imgFeature3{
+    width: 654px;
+    position: relative;
+    bottom: 63px;
+}
+
+.contenedorTextoFeature{
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    background-color: transparent;
+    width: 400px;
+}
+
+.contenedorTextoFeature h1{
+    margin-left: 0px !important;
+}
+
+.tituloSegundaFeature{
+    margin-left: 0px !important;
+    padding-top: 24px;
+    padding-right: 24px;
+    
+}
+
+.textoSegundaFeature{
+    margin-left: 8px !important;
+}
+
+
 
 /*************Sergio******************/
 .noMostrar{
