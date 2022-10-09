@@ -3,14 +3,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let btnFlechaCategorias = document.getElementById("flecha");
     let btnUsuario = document.getElementById("btnUsuario");
     let spinner = document.getElementById("spinner");
+    let spinnerP = document.getElementById("spinner%");
     let main = document.getElementById("main");
 
     spinner.className="loader";
+    spinnerP.className=""
     main.className="noMostrar";
+    setTimeout(function(){
+        spinnerP.innerHTML = "20%";
+    }, 500);
+    setTimeout(function(){
+        spinnerP.innerHTML = "40%";
+    }, 1000);
+    setTimeout(function(){
+        spinnerP.innerHTML = "60%";
+    }, 1500);
+    setTimeout(function(){
+        spinnerP.innerHTML = "80%";
+    }, 2000);
     setTimeout(function(){
         main.className="";
         spinner.className="noMostrar";
-    }, 5000);
+        spinnerP.className="noMostrar";
+    }, 2500);
     
     function mostrarCategorias() {
         let categorias = document.getElementById("categorias");
