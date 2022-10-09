@@ -787,9 +787,7 @@ hr{
     overflow: hidden;
     margin-left: 24px;
 }
-.containerImgFondoPJ:hover{
-    scale: 1;
-}
+
 
 .fondoPj{
     width: 174px;
@@ -804,6 +802,33 @@ hr{
     position: static;
     top: 0px;
 }
+
+  .card2 {
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .card2 .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card2 .card_image img {
+    width: inherit;
+    height: inherit;
+
+    object-fit: cover;
+  }
+  
+  
+  .card2:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
 
 .cardFeatureEND{
     margin-top: 0px;
