@@ -699,7 +699,7 @@ hr{
   }
   
 .mainLanzamiento{
-    height: 2461px;
+    height: 2410px;
 }
 .heroFondo{
     width: 100%;
@@ -737,7 +737,7 @@ hr{
 
 .personajeimg{
     position: absolute;
-    top: 269px;
+    top: 270px;
     left: 348px;
 }
 
@@ -804,7 +804,7 @@ hr{
 }
 
   .card2 {
-    border-radius: 40px;
+    border-radius: 25px;
     box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
     cursor: pointer;
     transition: 0.4s;
@@ -813,7 +813,7 @@ hr{
   .card2 .card_image {
     width: inherit;
     height: inherit;
-    border-radius: 40px;
+    border-radius: 25px;
   }
   
   .card2 .card_image img {
@@ -994,6 +994,9 @@ button{
     border: none;
     background: transparent;
 }
+
+
+/***********LOADER****************/
 .contenedorSpinner{
     display: flex;
     justify-content: center;
