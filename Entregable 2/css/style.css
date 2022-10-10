@@ -21,6 +21,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+
 body{
     background-color: #100117;
     font-family:  sans-serif;
@@ -31,61 +32,76 @@ html{
     font-family:  sans-serif;
 }
 
+
 /*************HEADER***********************/
+
 header{
     position: sticky;
     top: 0px;
     background-color: #28043A;
-    height: 81px;
+    height: 60px;
     width: 100%;
     z-index: 5;
 }
 
-input{
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.buscador input{
     background-color: #644DA4;
     border-radius: 50px;
     border: none;
-    width:  381px;
-    height: 31px;
+    width:  100%;
+    height: 100%;
+}
+button{
+    border: none;
+    background: transparent;
 }
 
 ::placeholder {
     color: #CFCFCF;
     font-weight: bold;
     font-size: 13px;
-    padding-left: 13px;
     font-family: sans-serif;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.menu{
-    max-width: 49px;
-    max-height: 48px;
-}
 .logo{
-    max-width: 77px;
-    max-height: 52px;
+    width: 55%;
+    height: 100%;
 }
 
 .buscador{
-    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 40%;
+    margin-left: 5%;
 }
 
 .buscadorImg{
     max-width: 21px;
     max-height: 23px;
     position: relative;
-    right: 40px;
-    top: 6px;
+    right: 16%;
 }
 
 .img{
-    padding-top: 16px;
-    padding-left: 31px;
+    display: flex;
+    height: 70%;
+}
+.img button{
+   padding-left: 4%;
+   padding-right: 0;
+}
+.menu{
+    width: 80%;
+    height: 100%;
 }
 
 .usuario{
@@ -98,14 +114,21 @@ input{
 
 }
 .menuUsuario{
-    padding-top: 21px;
-    padding-right: 31px;
     display: flex;
     flex-direction: row;
+    padding-top: 4px;
+    position: absolute;
+    right: 0;
 }
 
+#btnUsuario{
+    width: 30px;
+    height: 30px;
+}
 .logoUsuario{
-    padding: 8px 8px;
+    padding: 5px 5px;
+    width: 20px;
+    height: 20px;
 }
 
 .flecha{
@@ -115,12 +138,18 @@ input{
 }
 
 /*************MAIN***********************/
+
+
+
+
+
+
 main{
     background-color: #100117;
 }
 
 .containerMain{
-    padding-left: 24px;
+    margin-left: 24px;
 }
 
 h1{
@@ -165,7 +194,7 @@ h1{
     border: 0.25rem solid #644DA4;
     position: absolute;
     top: 420px;
-    left: 250px;
+    left: 150px;
     z-index: 1;
     overflow: hidden;
   }
@@ -373,17 +402,14 @@ footer{
 }
 
 .containerFooter{
-    padding: 24px 162px;
     display: flex;
     flex-direction: row;
     
 }
 footer .containerFooter .seccion {
-    padding: 0px 60px;
     
 }
 .seccionSiguenos{
-    padding: 0px 60px;
     height: 108px;
     display: flex;
     flex-direction: column;
@@ -400,12 +426,12 @@ footer .containerFooter .seccion h1{
 
 footer p {
     color: #F4F4F5;
-    font-size: 16px;
+    font-size: 6px;
     font-weight: 0;
 }
 .copyright{
     color: #F4F4F5;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 600;
 }
 .divCategoria{
@@ -414,7 +440,7 @@ footer p {
 }
 
 .listadoCategorias{
-    padding-right: 40px;
+
 }
 
 hr{
@@ -425,14 +451,14 @@ hr{
 }
 
 .logoRedes{
-    width: 24px;
+    width: 20px;
     height: 24px;
-    padding: 24px 16px;
+    padding: 0;
     overflow: hidden;
 }
 
 .redes{
-    max-width: 24px;
+    width: 70%;
 
 }
 
@@ -448,7 +474,9 @@ hr{
     justify-content: center;
     align-items: center;
 }
-
+h1{
+    font-size: 12px;
+}
 
 /********4 en linea*****************/
 
@@ -1020,3 +1048,179 @@ button{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  @media only screen and (min-width: 768px) {
+
+    /*************HEADER***********************/
+header{
+    position: sticky;
+    top: 0px;
+    background-color: #28043A;
+    height: 81px;
+    width: 100%;
+    z-index: 5;
+}
+
+input{
+    background-color: #644DA4;
+    border-radius: 50px;
+    border: none;
+    width:  381px;
+    height: 31px;
+}
+
+::placeholder {
+    color: #CFCFCF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 13px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu{
+    max-width: 49px;
+    max-height: 48px;
+}
+.logo{
+    max-width: 77px;
+    max-height: 52px;
+}
+
+
+.buscadorImg{
+    max-width: 21px;
+    max-height: 23px;
+    position: relative;
+    right: 40px;
+    top: 6px;
+}
+
+.img{
+    padding-top: 16px;
+    padding-left: 31px;
+}
+
+.usuario{
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #644DA4;
+
+}
+.menuUsuario{
+    padding-top: 21px;
+    padding-right: 31px;
+    position: unset;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoUsuario{
+    padding: 8px 8px;
+}
+
+.flecha{
+    max-width: 22px;
+    max-height: 22px;
+    padding: 8px 8px;
+}
+
+/*************MAIN***********************/
+
+
+/******FOOTER************************/
+
+footer{
+    width: 100%;
+    height: 255px;
+    margin-top: 32px;
+    background-color: #28043A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFooter{
+    padding: 24px 162px;
+    display: flex;
+    flex-direction: row;
+    
+}
+footer .containerFooter .seccion {
+    padding: 0px 60px;
+    
+}
+.seccionSiguenos{
+    padding: 0px 60px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+footer .containerFooter .seccion h1{
+    padding: 0px ;
+    padding-bottom: 16px ;
+}
+
+footer p {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 0;
+}
+.copyright{
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 600;
+}
+.divCategoria{
+    display: flex;
+    flex-direction: row;
+}
+
+.listadoCategorias{
+    padding-right: 40px;
+}
+
+hr{
+    height: 160px;
+    width: 50%;
+    background-color:#581578;
+    border-color: #581578;
+}
+
+.logoRedes{
+    width: 24px;
+    height: 24px;
+    padding: 24px 16px;
+    overflow: hidden;
+}
+
+.redes{
+    max-width: 24px;
+
+}
+
+.containerRedes{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+}
