@@ -39,7 +39,7 @@ header{
     position: sticky;
     top: 0px;
     background-color: #28043A;
-    height: 60px;
+    height: 70px;
     width: 100%;
     z-index: 5;
 }
@@ -75,13 +75,16 @@ button{
     width: 55%;
     height: 100%;
 }
-
+header a .logo{
+    width: 93%;
+    height: 100%;
+}
 .buscador{
     display: flex;
     align-items: center;
     width: 45%;
     height: 40%;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .buscadorImg{
@@ -188,13 +191,13 @@ h1{
     font-weight: 600;
     background: #644DA4;
     border-radius: 16px;
-    width: 150px;
-    height: 35px;
+    width: 20%;
+    height: 4%;
     color: #F4F4F5;
     border: 0.25rem solid #644DA4;
     position: absolute;
-    top: 420px;
-    left: 150px;
+    left: 16%;
+    top: 25%;
     z-index: 1;
     overflow: hidden;
   }
@@ -228,6 +231,7 @@ h1{
 
   .btnInfo p {
     font-family:  sans-serif;
+    font-size: 10px;
   }
 
 .containerCard{
@@ -393,7 +397,7 @@ h1{
 
 footer{
     width: 100%;
-    height: 255px;
+    height: 37vw;
     margin-top: 32px;
     background-color: #28043A;
     display: flex;
@@ -406,8 +410,18 @@ footer{
     flex-direction: row;
     
 }
+.seccionUltimo{
+    padding: 0px 0px 0px 4%;
+    padding-top: 20px;
+}
+
+.seccionUltimo h1{
+    padding-bottom: 16px;
+    padding-top: 0;
+}
 footer .containerFooter .seccion {
-    
+    padding: 0 4%;
+    padding-top: 20px;
 }
 .seccionSiguenos{
     height: 108px;
@@ -418,15 +432,22 @@ footer .containerFooter .seccion {
 
 }
 
+.seccionSiguenos h1{
+    padding-bottom: 16px;
+}
+
 
 footer .containerFooter .seccion h1{
     padding: 0px ;
     padding-bottom: 16px ;
 }
+footer h1{
+    font-size: 3vw;
+}
 
 footer p {
     color: #F4F4F5;
-    font-size: 6px;
+    font-size: 2vw;
     font-weight: 0;
 }
 .copyright{
@@ -439,12 +460,8 @@ footer p {
     flex-direction: row;
 }
 
-.listadoCategorias{
-
-}
-
 hr{
-    height: 160px;
+    height: 65%;
     width: 50%;
     background-color:#581578;
     border-color: #581578;
@@ -475,7 +492,7 @@ hr{
     align-items: center;
 }
 h1{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /********4 en linea*****************/
@@ -1055,7 +1072,7 @@ header{
     position: sticky;
     top: 0px;
     background-color: #28043A;
-    height: 81px;
+    height: 78px;
     width: 100%;
     z-index: 5;
 }
@@ -1065,9 +1082,13 @@ input{
     border-radius: 50px;
     border: none;
     width:  381px;
-    height: 31px;
+    height: 28px;
 }
-
+.buscador input{
+    width: 70%;
+    height: 28px;
+    margin-left: 9%;
+}
 ::placeholder {
     color: #CFCFCF;
     font-weight: bold;
@@ -1096,11 +1117,9 @@ input{
     max-height: 23px;
     position: relative;
     right: 40px;
-    top: 6px;
 }
 
 .img{
-    padding-top: 16px;
     padding-left: 31px;
 }
 
@@ -1114,7 +1133,6 @@ input{
 
 }
 .menuUsuario{
-    padding-top: 21px;
     padding-right: 31px;
     position: unset;
     display: flex;
@@ -1122,7 +1140,7 @@ input{
 }
 
 .logoUsuario{
-    padding: 8px 8px;
+    padding: 5px 5px;
 }
 
 .flecha{
@@ -1132,6 +1150,9 @@ input{
 }
 
 /*************MAIN***********************/
+h1{
+    font-size: 24px;
+}
 
 
 /******FOOTER************************/
@@ -1147,17 +1168,29 @@ footer{
 }
 
 .containerFooter{
-    padding: 24px 162px;
+    padding: 0px 0%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     
 }
 footer .containerFooter .seccion {
-    padding: 0px 60px;
+    padding: 0px 4vw;
+    padding-top: 24px;
     
 }
+.seccionUltimo{
+    padding: 0px 0px 0px 4vw;
+    padding-top: 24px;
+}
+
+.seccionUltimo h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+    padding-top: 0;
+}
 .seccionSiguenos{
-    padding: 0px 60px;
+    padding: 0px 4vw 0 0;
     height: 108px;
     display: flex;
     flex-direction: column;
@@ -1166,10 +1199,14 @@ footer .containerFooter .seccion {
 
 }
 
-
+.seccionSiguenos h1{
+    font-size: 24px;
+    padding-bottom: 16px ;
+}
 footer .containerFooter .seccion h1{
     padding: 0px ;
     padding-bottom: 16px ;
+    font-size: 24px;
 }
 
 footer p {
@@ -1181,6 +1218,7 @@ footer p {
     color: #F4F4F5;
     font-size: 16px;
     font-weight: 600;
+    margin-top: 24px;
 }
 .divCategoria{
     display: flex;
@@ -1188,7 +1226,7 @@ footer p {
 }
 
 .listadoCategorias{
-    padding-right: 40px;
+    padding-right: 3vw;
 }
 
 hr{
@@ -1201,7 +1239,7 @@ hr{
 .logoRedes{
     width: 24px;
     height: 24px;
-    padding: 24px 16px;
+    padding: 5% 3%;
     overflow: hidden;
 }
 
