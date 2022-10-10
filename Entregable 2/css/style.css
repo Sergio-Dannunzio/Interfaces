@@ -192,12 +192,12 @@ h1{
     background: #644DA4;
     border-radius: 16px;
     width: 20%;
-    height: 4%;
+    height: 5%;
+    top: 30%;
     color: #F4F4F5;
     border: 0.25rem solid #644DA4;
     position: absolute;
-    left: 16%;
-    top: 25%;
+    left: 11.5%;
     z-index: 1;
     overflow: hidden;
   }
@@ -468,7 +468,7 @@ hr{
 }
 
 .logoRedes{
-    width: 20px;
+    width: 24px;
     height: 24px;
     padding: 0;
     overflow: hidden;
@@ -482,7 +482,7 @@ hr{
 .containerRedes{
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-content: space-around;
 }
 
 .ubicacion{
@@ -548,6 +548,17 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btnPlay{
+    position: absolute;
+    width: 244px;
+    height: 72px;
+    top: 64%;
+    right: 41%;
+}
+.btnPlay p{
+    font-size: 32px;
 }
 
 .juego{
@@ -973,9 +984,6 @@ h1{
     margin-left: 8px !important;
 }
 
-
-
-/*************Sergio******************/
 .noMostrar{
     display: none;
 }
@@ -986,6 +994,7 @@ h1{
     width: 140px;
     height: 52%;
     background-color: #644DA4;
+    z-index: 2;
 }
 .listaCategorias li{
     display: flex;
@@ -1154,7 +1163,22 @@ h1{
     font-size: 24px;
 }
 
+.btnInfo {
+    
+    width: 10%;
+    height: 4%;
+   
+    position: absolute;
+    left: 12%;
+    top: 55%
 
+
+}
+
+.btnInfo p{
+    font-size: 16px;
+}
+/****CARROUSEL******/
 /******FOOTER************************/
 
 footer{
@@ -1237,14 +1261,14 @@ hr{
 }
 
 .logoRedes{
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     padding: 5% 3%;
     overflow: hidden;
 }
 
 .redes{
-    max-width: 24px;
+   width: 100%;
 
 }
 
