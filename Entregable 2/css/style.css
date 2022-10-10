@@ -125,13 +125,13 @@ header a .logo{
 }
 
 #btnUsuario{
-    width: 30px;
-    height: 30px;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
 }
 .logoUsuario{
-    padding: 5px 5px;
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
 }
 
 .flecha{
@@ -329,7 +329,7 @@ h1{
     max-width: 360px;
     overflow: hidden;  
 }
-/******Sergio************************/
+
 .cardWithName a {
     margin-right: 21px;
     border-radius: 25px;
@@ -991,18 +991,20 @@ h1{
     display: flex;
     flex-direction: column;
     position:fixed;
-    width: 140px;
+    width: 160px;
     height: 52%;
     background-color: #644DA4;
     z-index: 2;
 }
 .listaCategorias li{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 16px;
     align-items: center;
     font-weight: bold;
     font-size: 16px;
     height: 40px;
+    color: #F4F4F5;
 }
 .listaCategorias li:hover{
     color: #100117;
@@ -1014,35 +1016,72 @@ h1{
     position:fixed;
     right: 0;
     width: 140px;
-    height: 20%;
+    height: 30%;
     background-color: #644DA4;
 }
 .listaUsuarioCategorias li{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     align-items: center;
     font-weight: bold;
     font-size: 16px;
     height: 30px;
+    color: #F4F4F5;
 }
 .listaUsuarioCategorias li:hover{
     color: #100117;
     background-color: #957BDC;
 }
+
+.logoUsuario2{
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;    
+}   
+
+.listaCategorias hr{
+    margin: 0;
+    margin-left: 8px;
+    height: 2px;
+    border-width:0;
+    background-color: #581578;
+    width: 90%;
+}
+
 .listaUsuarioCategorias div{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-direction: row;
     font-weight: bold;
+    color: #F4F4F5;
 }
 .listaUsuarioCategorias hr{
     margin: 0;
-    margin-left: 22px;
+    margin-left: 8px;
     height: 2px;
     border-width:0;
-    background-color: #100117;
-    width: 70%;
+    background-color: #F4F4F5;
+    width: 90%;
+}
+
+.liToggle{
+    padding-left: 0px !important;
+}
+.listaUsuarioCategorias .liToggle:hover{
+    color: #100117;
+    background-color: #957BDC;
+}
+.containerRedesToggle{
+    padding: 0px 16%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 button{
     border: none;
@@ -1155,7 +1194,7 @@ input{
 .flecha{
     max-width: 22px;
     max-height: 22px;
-    padding: 8px 8px;
+    padding: 16px 8px;
 }
 
 /*************MAIN***********************/
@@ -1169,7 +1208,7 @@ h1{
     height: 4%;
    
     position: absolute;
-    left: 12%;
+    left: 17%;
     top: 55%
 
 
