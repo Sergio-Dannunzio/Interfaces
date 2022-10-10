@@ -68,6 +68,7 @@ button{
     color: #CFCFCF;
     font-weight: bold;
     font-size: 13px;
+    padding-left: 8px;
     font-family: sans-serif;
 }
 
@@ -137,7 +138,8 @@ header a .logo{
 .flecha{
     max-width: 22px;
     max-height: 22px;
-    padding: 8px 8px;
+    padding: 8px 12px;
+    padding-left: 4px;
 }
 
 /*************MAIN***********************/
@@ -236,8 +238,8 @@ h1{
 
 .containerCard{
    padding-right: 16px;
-   width:  348px;
-   height: 260px;
+   width:  313.2px;
+   /*height: 210.6px;*/
    line-height:0;
 }
 
@@ -266,8 +268,8 @@ h1{
   }
 
 .card{
-    width:  348px;
-    height: 51px;
+    width:  313.2px;
+    height: 45.9px;
     background-color: #644DA4;
     border-radius: 0px 0px 25px 25px;
     display: flex;
@@ -275,8 +277,8 @@ h1{
 }
 
 .cardWithName{
-    width:  348px;
-    height: 51px;
+    width:  313.2px;
+    height: 45.9px;
     background-color: #644DA4;
     border-radius: 0px 0px 25px 25px;
     display: flex;
@@ -284,8 +286,8 @@ h1{
 }
 
 .cardPrice{
-    width:  348px;
-    height: 51px;
+    width:  313.2px;
+    height: 45.9px;
     background-color: #644DA4;
     border-radius: 0px 0px 25px 25px;
     display: flex;
@@ -307,8 +309,8 @@ h1{
 }
 
 .containerImg{
-    width: 348px;
-    height: 204px;
+    width:  313.2px;
+    height: 183.6px;
     overflow: hidden;
     border-radius: 25px 25px 0px 0px;
 }
@@ -316,12 +318,12 @@ h1{
 
 
 .imgCarrouselHeigh{
-    max-height: 204px;
+    height: 183.6px;
     overflow: hidden;
 }
 
 .imgCarrouselWidth{
-    max-width: 348px;
+    width:  313.2px;
     overflow: hidden;
 }
 
@@ -343,7 +345,7 @@ h1{
     border: none;
     height: 35px;
     width: 90px;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-right: 21px;
     text-align: center;
 }
@@ -369,7 +371,7 @@ h1{
     border: solid 2px #B7FFDC;
     height: 35px;
     width: 90px;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-right: 21px;
     text-align: center;
 }
@@ -397,7 +399,7 @@ h1{
 
 footer{
     width: 100%;
-    height: 37vw;
+    height: 40vw;
     margin-top: 32px;
     background-color: #28043A;
     display: flex;
@@ -410,13 +412,17 @@ footer{
     flex-direction: row;
     
 }
+
+
 .seccionUltimo{
-    padding: 0px 0px 0px 4%;
-    padding-top: 20px;
+    padding: 0px 4% 0px 4%;
+    padding-top: 16px;
 }
 
+
+
 .seccionUltimo h1{
-    padding-bottom: 16px;
+    padding-bottom: 8px;
     padding-top: 0;
 }
 footer .containerFooter .seccion {
@@ -432,8 +438,11 @@ footer .containerFooter .seccion {
 
 }
 
-.seccionSiguenos h1{
-    padding-bottom: 16px;
+.siguenos{
+    padding-bottom: 8px !important;
+}
+.listadoCategorias{
+    padding-right: 3px;
 }
 
 
@@ -447,8 +456,13 @@ footer h1{
 
 footer p {
     color: #F4F4F5;
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: 0;
+}
+
+
+.tandil{
+    padding-bottom: 8px !important;
 }
 .copyright{
     color: #F4F4F5;
@@ -461,7 +475,7 @@ footer p {
 }
 
 hr{
-    height: 65%;
+    height: 85%;
     width: 50%;
     background-color:#581578;
     border-color: #581578;
@@ -475,7 +489,11 @@ hr{
 }
 
 .redes{
-    width: 70%;
+    width: 80%;
+
+}
+.redes2{
+    width: 100%;
 
 }
 
@@ -490,6 +508,7 @@ hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 h1{
     font-size: 16px;
@@ -587,11 +606,13 @@ h1{
 .redesJuego{
     width: 40px;
     height: 40px;
+    padding-top: 4px;
 }
 
 .facebook{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
 }
 
 .contendedorGaleria{
@@ -783,7 +804,7 @@ h1{
 .fuegoimg{
     /*width: 940px;*/
     position: absolute;
-    top: 444px;
+    top: 441px;
     left: 300px;
 }
 
@@ -793,7 +814,7 @@ h1{
 
 .personajeimg{
     position: absolute;
-    top: 270px;
+    top: 267px;
     left: 348px;
 }
 
@@ -946,13 +967,13 @@ h1{
     width: 500px;
     right: 0px;
     position: relative;
-    bottom: 63.5px;
+    bottom: 63px;
 }
 
 .imgFeature2{
     height: 468px;
     position: relative;
-    bottom: 125.5px;
+    bottom: 125px;
 }
 
 .imgFeature3{
@@ -977,11 +998,17 @@ h1{
     margin-left: 0px !important;
     padding-top: 24px;
     padding-right: 24px;
+    padding-bottom: 24px;
     
 }
 
 .textoSegundaFeature{
     margin-left: 8px !important;
+}
+
+.tituloTercerFeature{
+    text-align: center;
+    padding-bottom: 24px;
 }
 
 .noMostrar{
@@ -1016,7 +1043,7 @@ h1{
     position:fixed;
     right: 0;
     width: 140px;
-    height: 25%;
+    height: 28%;
     background-color: #644DA4;
 }
 .listaUsuarioCategorias li{
@@ -1076,12 +1103,13 @@ h1{
     color: #100117;
     background-color: #957BDC;
 }
+
 .containerRedesToggle{
     padding: 0px 16%;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 button{
     border: none;
@@ -1181,23 +1209,34 @@ input{
 
 }
 .menuUsuario{
-    padding-right: 31px;
+    padding-right: 32px;
+    padding-top: 16px;
     position: unset;
     display: flex;
     flex-direction: row;
 }
 
 .logoUsuario{
-    padding: 5px 5px;
+
+    width: 40px;
+    height: 40px;
 }
 
 .flecha{
     max-width: 22px;
     max-height: 22px;
-    padding: 16px 8px;
+    padding: 16px 16px;
 }
 
 /*************MAIN***********************/
+.containerRedesToggle{
+    padding: 0px 16%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 h1{
     font-size: 24px;
 }
@@ -1217,7 +1256,181 @@ h1{
 .btnInfo p{
     font-size: 16px;
 }
+
 /****CARROUSEL******/
+
+.containerCard{
+   padding-right: 16px;
+   width:  348px;
+   height: 260px;
+   line-height:0;
+}
+
+.carrousel{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    overflow: scroll;
+    list-style: none;
+}
+
+
+.carrousel::-webkit-scrollbar{
+    width: 2px;
+    height: 8px; 
+}
+
+.carrousel::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.carrousel::-webkit-scrollbar-thumb {
+    background: #581578;
+    border-radius: 8px;
+  }
+
+.card{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardWithName{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end; 
+}
+
+.cardPrice .precio {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 26px;
+    padding-right: 8px;
+}
+
+
+.cardWithName h1 {
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+.containerImg{
+    width: 348px;
+    height: 204px;
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+}
+
+
+
+.imgCarrouselHeigh{
+    height: 204px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidth{
+    width: 348px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidthJuego{
+    width: 360px;
+    overflow: hidden;  
+}
+
+.cardWithName a {
+    margin-right: 21px;
+    border-radius: 25px;
+    height: 42px;
+    width: 90px;
+}
+
+.btnComprar{
+    background-color: #18F58B;
+    border-radius: 25px;
+    border: none;
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    margin-right: 21px;
+    text-align: center;
+}
+.comprar {
+    border-color: #18F58B;
+    box-shadow: 0 0 40px 40px  #18F58B inset, 0 0 0 0 #18F58B;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .comprar:hover {
+    box-shadow: 0 0 10px 0  #18F58B inset, 0 0 10px 4px  #18F58B;
+  }
+.btnComprar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.btnJugar{
+    background-color: #B7FFDC;
+    border-radius: 25px;
+    border: solid 2px #B7FFDC;
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    margin-right: 21px;
+    text-align: center;
+}
+.btnJugar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.jugar {
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .jugar:hover {
+    box-shadow: 0 0 10px 0  #B7FFDC inset, 0 0 10px 4px  #18F58B;
+  }
+
+  .jugar:hover  p {
+    color: #100117;
+  }
+
+
+  .btnPlay{
+    position: absolute;
+    width: 244px;
+    height: 72px;
+    top: 64%;
+    right: 41%;
+}
+.btnPlay p{
+    font-size: 32px;
+}
+
+
+
 /******FOOTER************************/
 
 footer{
@@ -1262,9 +1475,10 @@ footer .containerFooter .seccion {
 
 }
 
-.seccionSiguenos h1{
+.seccion .siguenos{
     font-size: 24px;
     padding-bottom: 16px ;
+    padding-left: 1.5vw !important;
 }
 footer .containerFooter .seccion h1{
     padding: 0px ;
@@ -1322,6 +1536,9 @@ hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 8px;
+    padding-left: 8px;
 }
+
 
 }
