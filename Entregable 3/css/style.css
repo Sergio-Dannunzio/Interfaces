@@ -1,0 +1,1544 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+body{
+    background-color: #100117;
+    font-family:  sans-serif;
+    color: #CFCFCF;
+}
+
+html{
+    font-family:  sans-serif;
+}
+
+
+/*************HEADER***********************/
+
+header{
+    position: sticky;
+    top: 0px;
+    background-color: #28043A;
+    height: 70px;
+    width: 100%;
+    z-index: 5;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.buscador input{
+    background-color: #644DA4;
+    border-radius: 50px;
+    border: none;
+    width:  100%;
+    height: 100%;
+}
+button{
+    border: none;
+    background: transparent;
+}
+
+::placeholder {
+    color: #CFCFCF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 8px;
+    font-family: sans-serif;
+}
+
+.logo{
+    width: 55%;
+    height: 100%;
+}
+header a .logo{
+    width: 93%;
+    height: 100%;
+}
+.buscador{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 40%;
+    margin-left: 3%;
+}
+
+.buscadorImg{
+    max-width: 21px;
+    max-height: 23px;
+    position: relative;
+    right: 16%;
+}
+
+.img{
+    display: flex;
+    height: 70%;
+}
+.img button{
+   padding-left: 4%;
+   padding-right: 0;
+}
+.menu{
+    width: 80%;
+    height: 100%;
+}
+
+.usuario{
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #644DA4;
+
+}
+.menuUsuario{
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px;
+    position: absolute;
+    right: 0;
+}
+
+#btnUsuario{
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+}
+.logoUsuario{
+    width: 32px;
+    height: 32px;
+}
+
+.flecha{
+    max-width: 22px;
+    max-height: 22px;
+    padding: 8px 12px;
+    padding-left: 4px;
+}
+
+/*************MAIN***********************/
+
+
+
+
+
+
+main{
+    background-color: #100117;
+}
+
+.containerMain{
+    margin-left: 24px;
+}
+
+h1{
+    color: #F4F4F5;
+    font-size: 24px;
+    padding-top: 32px;
+
+}
+.destacados{
+    padding-top: 12px !important;  
+}
+
+.containerMortal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.imgMortal{
+    width: 91%;
+
+}
+
+.logoMortal{
+    max-width: 400px;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+
+.btnInfo {
+    font-size: 16px;
+    font-family:  sans-serif;
+    font-weight: 600;
+    background: #644DA4;
+    border-radius: 16px;
+    width: 20%;
+    height: 5%;
+    top: 30%;
+    color: #F4F4F5;
+    border: 0.25rem solid #644DA4;
+    position: absolute;
+    left: 11.5%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .btnInfo:hover {
+    color: #644DA4;
+  }
+  .btnInfo::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  
+  button[class^="btnInfo"]::after {
+    transition: all 0.3s ease;
+  }
+  
+  .btnInfo.info::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+  }
+  .btnInfo.info:hover::after {
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  .btnInfo p {
+    font-family:  sans-serif;
+    font-size: 10px;
+  }
+
+.containerCard{
+   padding-right: 16px;
+   width:  313.2px;
+   /*height: 210.6px;*/
+   line-height:0;
+}
+
+.carrousel{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    overflow: scroll;
+    list-style: none;
+}
+
+
+.carrousel::-webkit-scrollbar{
+    width: 2px;
+    height: 8px; 
+}
+
+.carrousel::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.carrousel::-webkit-scrollbar-thumb {
+    background: #581578;
+    border-radius: 8px;
+  }
+
+.card{
+    width:  313.2px;
+    height: 45.9px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardWithName{
+    width:  313.2px;
+    height: 45.9px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice{
+    width:  313.2px;
+    height: 45.9px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end; 
+}
+
+.cardPrice .precio {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 26px;
+    padding-right: 8px;
+}
+
+
+.cardWithName h1 {
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+.containerImg{
+    width:  313.2px;
+    height: 183.6px;
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+}
+
+
+
+.imgCarrouselHeigh{
+    height: 183.6px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidth{
+    width:  313.2px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidthJuego{
+    max-width: 360px;
+    overflow: hidden;  
+}
+
+.cardWithName a {
+    margin-right: 21px;
+    border-radius: 25px;
+    height: 42px;
+    width: 90px;
+}
+
+.btnComprar{
+    background-color: #18F58B;
+    border-radius: 25px;
+    border: none;
+    height: 35px;
+    width: 90px;
+    margin-top: 5px;
+    margin-right: 21px;
+    text-align: center;
+}
+.comprar {
+    border-color: #18F58B;
+    box-shadow: 0 0 40px 40px  #18F58B inset, 0 0 0 0 #18F58B;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .comprar:hover {
+    box-shadow: 0 0 10px 0  #18F58B inset, 0 0 10px 4px  #18F58B;
+  }
+.btnComprar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.btnJugar{
+    background-color: #B7FFDC;
+    border-radius: 25px;
+    border: solid 2px #B7FFDC;
+    height: 35px;
+    width: 90px;
+    margin-top: 5px;
+    margin-right: 21px;
+    text-align: center;
+}
+.btnJugar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.jugar {
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .jugar:hover {
+    box-shadow: 0 0 10px 0  #B7FFDC inset, 0 0 10px 4px  #18F58B;
+  }
+
+  .jugar:hover  p {
+    color: #100117;
+  }
+
+
+/******FOOTER************************/
+
+footer{
+    width: 100%;
+    height: 40vw;
+    margin-top: 32px;
+    background-color: #28043A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFooter{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.seccionUltimo{
+    padding: 0px 4% 0px 4%;
+    padding-top: 16px;
+}
+
+
+
+.seccionUltimo h1{
+    padding-bottom: 8px;
+    padding-top: 0;
+}
+footer .containerFooter .seccion {
+    padding: 0 4%;
+    padding-top: 20px;
+}
+.seccionSiguenos{
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.siguenos{
+    padding-bottom: 8px !important;
+}
+.listadoCategorias{
+    padding-right: 3px;
+}
+
+
+footer .containerFooter .seccion h1{
+    padding: 0px ;
+    padding-bottom: 16px ;
+}
+footer h1{
+    font-size: 3vw;
+}
+
+footer p {
+    color: #F4F4F5;
+    font-size: 2.5vw;
+    font-weight: 0;
+}
+
+
+.tandil{
+    padding-bottom: 8px !important;
+}
+.copyright{
+    color: #F4F4F5;
+    font-size: 10px;
+    font-weight: 600;
+}
+.divCategoria{
+    display: flex;
+    flex-direction: row;
+}
+
+hr{
+    height: 85%;
+    width: 50%;
+    background-color:#581578;
+    border-color: #581578;
+}
+
+.logoRedes{
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.redes{
+    width: 80%;
+
+}
+.redes2{
+    width: 100%;
+
+}
+
+.containerRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    font-size: 16px;
+}
+
+/********4 en linea*****************/
+
+.breadCrums{
+    background-color:#581578;
+    width: 100%;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedorIMGtexto{
+    display: flex;
+    flex-direction: row;
+    padding-left: 32px;
+}
+
+.contenedorIMGjuego{
+    width: 133px;
+    height: 78px;
+    overflow: hidden;
+}
+
+
+.imgjuego{
+    width: 133px;
+    height: 80px;
+}
+.contendedorBreadCrums{
+    display: flex;
+    flex-direction: column;
+
+    padding-left:  24px;
+}
+
+.contendedorBreadCrums p {
+    color: #CFCFCF;
+}
+
+
+.contendedorBreadCrums h1 {
+   padding-top: 8px;
+}
+
+
+.contenedorJuego{
+    width: 1230px;
+    height: 640px;
+    background-color:#581578;
+    margin:0px 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnPlay{
+    position: absolute;
+    width: 244px;
+    height: 72px;
+    top: 64%;
+    right: 41%;
+}
+.btnPlay p{
+    font-size: 32px;
+}
+
+.juego{
+    display: flex;
+    width: 100%;
+    height: 640px;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.containerRedesJuego{
+
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding-right: 80px;
+}
+
+.logoRedesJuego{
+    width: 40px;
+    height: 40px;
+    padding: 16px 16px;
+    overflow: hidden;
+}
+
+.redesJuego{
+    width: 40px;
+    height: 40px;
+    padding-top: 4px;
+}
+
+.facebook{
+    width: 30px;
+    height: 30px;
+    padding-top: 8px;
+}
+
+.contendedorGaleria{
+    display: flex;
+    justify-content: center;
+}
+.galeria{
+    width: 82%;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.contenedorTexto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 150px;
+}
+
+.contenedorTexto p {
+    padding-top: 16px;
+}
+
+.comentariosH1{
+    padding-left: 148px;
+}
+
+.contenedorComentarios{
+    background-color: #3F1A52;
+    width: 1230;
+    height:99px;
+    margin: 16px 148px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comentarioGlobal{
+    background-color: #644DA4;
+    width: 1072px;
+    height: 67px;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 84px;
+}
+
+.usuarioComentario{
+    margin: 24px;
+    width: 54px;
+    height: 54px;
+    margin-right: 32px;
+}
+
+.divideComentario{
+    height: 2px;
+    width: 1216px;
+    background-color: #F4F4F5
+}
+
+.comentariosOtros{
+    background-color: #3F1A52;
+    width: 1230;
+    height:99px;
+    margin: 16px 148px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedorIMGComentario{
+    display: flex;
+    flex-direction: row;
+}
+
+.contendorDatos h1{
+    margin-top: 16px;
+    padding: 0px;
+
+}
+.contenedoNombreFecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedoNombreFecha p{
+    margin: 22px;
+    padding: 0px;
+}
+
+.meGusta{
+    display: flex;
+    flex-direction: row;
+    margin: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.meGusta p{
+    margin-right: 16px;
+}
+
+/*************LANZAMIENTO******************/
+
+
+.btn_trailer{
+    font-size: 16px;
+    font-weight: bold;
+    background: #FFCE31;
+    color: #100117;
+    border: 0.25rem solid #FFCE31;
+    border-radius: 16px;
+    width: 128px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 652px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .btn_trailer:hover {
+    color: #100117;
+  }
+  .btn_trailer::after {
+    content: "";
+    background: #FFE38A;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  
+  
+  button[class^="btn"]::after {
+    transition: all 0.3s ease;
+  }
+  button[class^="btn"]:hover::after {
+    transition: all 0.3s ease-out;
+  }
+  
+  .btn_trailer::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+  }
+  .btn_trailer:hover::after {
+    transform: scale(1, 1);
+  }
+  
+.mainLanzamiento{
+    height: 2410px;
+}
+.heroFondo{
+    width: 100%;
+    height: 621px;
+    overflow: hidden;
+}
+
+.fondo{
+    width: 100%;
+}
+.contenedorLogoLanzamiento{
+    width: 630px;
+}
+.logoMortalLanzamiento{
+    width: 630px;
+    position: absolute;
+    top: 100px;
+    left: 438px;
+}
+
+.fuego{
+    width: 940px;
+}
+
+.fuegoimg{
+    /*width: 940px;*/
+    position: absolute;
+    top: 441px;
+    left: 300px;
+}
+
+.personaje{
+    width: 1036px;
+}
+
+.personajeimg{
+    position: absolute;
+    top: 267px;
+    left: 348px;
+}
+
+.contenedorHistoria{
+   
+    height: 406px;
+    margin: 24px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    background-color: rgb(55, 28, 124, 0.6);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia{
+    width: 986px;
+    height: 284px;
+    overflow: scroll;
+    background-color: transparent;
+}
+
+.historia::-webkit-scrollbar{
+    width: 8px;
+    height: 0px; 
+}
+
+.historia::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.historia::-webkit-scrollbar-thumb {
+    background: #F4F4F5;
+    border-radius: 8px;
+}
+
+.historia p {
+    color: #CFCFCF;
+    background-color: transparent;
+}
+
+.containerImgFondoPJ{
+    width: 174px;
+    height: 240px;
+    overflow: hidden;
+    margin-left: 24px;
+}
+
+
+.fondoPj{
+    width: 174px;
+    height: 231px;
+    opacity: 1; 
+}
+
+.containerImgPJ{
+    width: 174px;
+    height: 187px;
+    overflow: hidden;
+    position: static;
+    top: 0px;
+}
+
+  .card2 {
+    border-radius: 25px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .card2 .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 25px;
+  }
+  
+  .card2 .card_image img {
+    width: inherit;
+    height: inherit;
+
+    object-fit: cover;
+  }
+  
+  
+  .card2:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+
+.cardFeatureEND{
+    margin-top: 0px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardFeatureEND2{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 200px;
+}
+
+.cardFeatureSTART{
+    display: flex;
+    justify-content: start;
+    position: relative;
+    bottom: 100px;
+}
+
+.cardFeature{
+    background-color: rgb(55, 28, 124, 0.6);
+    width: 805px;
+    height: 281px;
+    border-radius: 15px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardFeature2{
+    background-color: rgb(55, 28, 124, 0.6);
+    width: 805px;
+    height: 281px;
+    border-radius: 15px;
+    margin-top: 131px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardFeature div{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardFeature div p {
+    padding-top: 24px;
+    margin-left: 24px;
+}
+
+.cardFeature div h1 {
+    padding-top: 16px;
+    margin-left: 32px;
+    text-align: center;
+}
+
+.imgFeature{
+    width: 500px;
+    right: 0px;
+    position: relative;
+    bottom: 63px;
+}
+
+.imgFeature2{
+    height: 468px;
+    position: relative;
+    bottom: 125px;
+}
+
+.imgFeature3{
+    width: 654px;
+    position: relative;
+    bottom: 63px;
+}
+
+.contenedorTextoFeature{
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    background-color: transparent;
+    width: 400px;
+}
+
+.contenedorTextoFeature h1{
+    margin-left: 0px !important;
+}
+
+.tituloSegundaFeature{
+    margin-left: 0px !important;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    
+}
+
+.textoSegundaFeature{
+    margin-left: 8px !important;
+}
+
+.tituloTercerFeature{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.noMostrar{
+    display: none;
+}
+.listaCategorias{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    width: 160px;
+    height: 52%;
+    background-color: #644DA4;
+    z-index: 2;
+}
+.listaCategorias li{
+    display: flex;
+    justify-content: start;
+    padding-left: 16px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    height: 40px;
+    color: #F4F4F5;
+}
+.listaCategorias li:hover{
+    color: #100117;
+    background-color: #957BDC;
+}
+.listaUsuarioCategorias{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    right: 0;
+    width: 140px;
+    height: 28%;
+    background-color: #644DA4;
+}
+.listaUsuarioCategorias li{
+    display: flex;
+    justify-content: start;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    color: #F4F4F5;
+}
+.listaUsuarioCategorias li:hover{
+    color: #100117;
+    background-color: #957BDC;
+}
+
+.logoUsuario2{
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;    
+}   
+
+.listaCategorias hr{
+    margin: 0;
+    margin-left: 8px;
+    height: 2px;
+    border-width:0;
+    background-color: #581578;
+    width: 90%;
+}
+
+.listaUsuarioCategorias div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    color: #F4F4F5;
+}
+.listaUsuarioCategorias hr{
+    margin: 0;
+    margin-left: 8px;
+    height: 2px;
+    border-width:0;
+    background-color: #F4F4F5;
+    width: 90%;
+}
+
+.liToggle{
+    padding-left: 0px !important;
+}
+.listaUsuarioCategorias .liToggle:hover{
+    color: #100117;
+    background-color: #957BDC;
+}
+
+.containerRedesToggle{
+    padding: 0px 16%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+button{
+    border: none;
+    background: transparent;
+}
+
+
+/***********LOADER****************/
+.contenedorSpinner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loader {
+    margin-top: 15%;
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #644DA4; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  .loaderPorcentaje{
+    font-size: 16px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @media only screen and (min-width: 768px) {
+
+    /*************HEADER***********************/
+header{
+    position: sticky;
+    top: 0px;
+    background-color: #28043A;
+    height: 78px;
+    width: 100%;
+    z-index: 5;
+}
+
+input{
+    background-color: #644DA4;
+    border-radius: 50px;
+    border: none;
+    width:  381px;
+    height: 28px;
+}
+.buscador input{
+    width: 70%;
+    height: 28px;
+    margin-left: 9%;
+}
+::placeholder {
+    color: #CFCFCF;
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 13px;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu{
+    max-width: 49px;
+    max-height: 48px;
+}
+.logo{
+    max-width: 77px;
+    max-height: 52px;
+}
+
+
+.buscadorImg{
+    max-width: 21px;
+    max-height: 23px;
+    position: relative;
+    right: 40px;
+}
+
+.img{
+    padding-left: 31px;
+}
+
+.usuario{
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #644DA4;
+
+}
+.menuUsuario{
+    padding-right: 32px;
+    padding-top: 16px;
+    position: unset;
+    display: flex;
+    flex-direction: row;
+}
+
+.logoUsuario{
+
+    width: 40px;
+    height: 40px;
+}
+
+.flecha{
+    max-width: 22px;
+    max-height: 22px;
+    padding: 16px 16px;
+}
+
+/*************MAIN***********************/
+.containerRedesToggle{
+    padding: 0px 16%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 24px;
+}
+
+.btnInfo {
+    
+    width: 10%;
+    height: 4%;
+   
+    position: absolute;
+    left: 17%;
+    top: 55%
+
+
+}
+
+.btnInfo p{
+    font-size: 16px;
+}
+
+/****CARROUSEL******/
+
+.containerCard{
+   padding-right: 16px;
+   width:  348px;
+   height: 260px;
+   line-height:0;
+}
+
+.carrousel{
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    overflow: scroll;
+    list-style: none;
+}
+
+
+.carrousel::-webkit-scrollbar{
+    width: 2px;
+    height: 8px; 
+}
+
+.carrousel::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: none;
+  }
+
+.carrousel::-webkit-scrollbar-thumb {
+    background: #581578;
+    border-radius: 8px;
+  }
+
+.card{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end;
+}
+
+.cardWithName{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardPrice{
+    width:  348px;
+    height: 51px;
+    background-color: #644DA4;
+    border-radius: 0px 0px 25px 25px;
+    display: flex;
+    justify-content: end; 
+}
+
+.cardPrice .precio {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 26px;
+    padding-right: 8px;
+}
+
+
+.cardWithName h1 {
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+.containerImg{
+    width: 348px;
+    height: 204px;
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+}
+
+
+
+.imgCarrouselHeigh{
+    height: 204px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidth{
+    width: 348px;
+    overflow: hidden;
+}
+
+.imgCarrouselWidthJuego{
+    width: 360px;
+    overflow: hidden;  
+}
+
+.cardWithName a {
+    margin-right: 21px;
+    border-radius: 25px;
+    height: 42px;
+    width: 90px;
+}
+
+.btnComprar{
+    background-color: #18F58B;
+    border-radius: 25px;
+    border: none;
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    margin-right: 21px;
+    text-align: center;
+}
+.comprar {
+    border-color: #18F58B;
+    box-shadow: 0 0 40px 40px  #18F58B inset, 0 0 0 0 #18F58B;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .comprar:hover {
+    box-shadow: 0 0 10px 0  #18F58B inset, 0 0 10px 4px  #18F58B;
+  }
+.btnComprar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.btnJugar{
+    background-color: #B7FFDC;
+    border-radius: 25px;
+    border: solid 2px #B7FFDC;
+    height: 35px;
+    width: 90px;
+    margin-top: 8px;
+    margin-right: 21px;
+    text-align: center;
+}
+.btnJugar p{
+    font-family:  sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #100117;
+}
+
+.jugar {
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  .jugar:hover {
+    box-shadow: 0 0 10px 0  #B7FFDC inset, 0 0 10px 4px  #18F58B;
+  }
+
+  .jugar:hover  p {
+    color: #100117;
+  }
+
+
+  .btnPlay{
+    position: absolute;
+    width: 244px;
+    height: 72px;
+    top: 64%;
+    right: 41%;
+}
+.btnPlay p{
+    font-size: 32px;
+}
+
+
+
+/******FOOTER************************/
+
+footer{
+    width: 100%;
+    height: 255px;
+    margin-top: 32px;
+    background-color: #28043A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFooter{
+    padding: 0px 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+footer .containerFooter .seccion {
+    padding: 0px 4vw;
+    padding-top: 24px;
+    
+}
+.seccionUltimo{
+    padding: 0px 0px 0px 4vw;
+    padding-top: 24px;
+}
+
+.seccionUltimo h1{
+    font-size: 24px;
+    padding-bottom: 16px;
+    padding-top: 0;
+}
+.seccionSiguenos{
+    padding: 0px 4vw 0 0;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.seccion .siguenos{
+    font-size: 24px;
+    padding-bottom: 16px ;
+    padding-left: 1.5vw !important;
+}
+footer .containerFooter .seccion h1{
+    padding: 0px ;
+    padding-bottom: 16px ;
+    font-size: 24px;
+}
+
+footer p {
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 0;
+}
+.copyright{
+    color: #F4F4F5;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+.divCategoria{
+    display: flex;
+    flex-direction: row;
+}
+
+.listadoCategorias{
+    padding-right: 3vw;
+}
+
+hr{
+    height: 160px;
+    width: 50%;
+    background-color:#581578;
+    border-color: #581578;
+}
+
+.logoRedes{
+    width: 32px;
+    height: 32px;
+    padding: 5% 3%;
+    overflow: hidden;
+}
+
+.redes{
+   width: 100%;
+
+}
+
+.containerRedes{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+
+}

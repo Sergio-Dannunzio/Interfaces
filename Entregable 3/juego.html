@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Juegos arcade</title>
+    <script src="logicaLanzamiento.js"></script>
+</head>
+<header>
+    <div class="container">
+        <div class="img">
+            <button id="botonCategorias">
+                <img class="menu" src="img/menu.png" alt="">
+            </button>
+            
+            <a href="Home.html"><img class="logo" src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar juegos" name="" id="">
+            <img class="buscadorImg" src="img/buscador.png" alt="">
+        </div>
+        <div class="menuUsuario">
+            <div id="btnUsuario" class="usuario">
+                <img class="logoUsuario" src="img/Component 22.svg" alt="">
+            </div>
+            <div id="flecha">
+                <img class="flecha" src="img/ordenar-abajo.png" alt="">
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="categorias" class="noMostrar">
+        <div class="categorias">
+            
+            <ul class="listaCategorias">
+                <li>Acción</li>
+                <li>Aventura</li>
+                <li>Carreras</li>
+                <li>Clásicos</li>
+                <li>Deportes</li>
+                <li>Escape</li>
+                <li>Estrategia</li>
+                <li>Educativos</li>
+                <li>Puzzle</li>
+                <li>Pool</li>
+                <li>Multijugador</li>
+                <hr>
+                <li class="liToggle">
+                    <div class="containerRedesToggle">
+                        <div class="logoRedes">
+                            <img class="redes" src="img/logoFB.svg" alt="">
+                        </div>
+                        <div class="logoRedes">
+                            <img class="redes" src="img/logoTW.svg" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="usuarioCategorias" class="noMostrar">
+        <ul class="listaUsuarioCategorias">
+            <div>
+                <img class="logoUsuario2" src="img/Component 29.svg" alt="">
+                <p>Nombre</p>
+            </div>
+            <hr>
+            <li>Notificaciones</li>
+            <li>Tienda</li>
+            <li>Soporte</li>
+            <li>Configuración</li>
+            <li>Cerrar sesión</li>
+        </ul>
+    </div>
+    <div class="breadCrums">
+        <div class="contenedorIMGtexto">
+            <div class="contenedorIMGjuego">
+                <img class="imgjuego" src="./img/Component 26.svg" alt="">
+            </div>
+            <div class="contendedorBreadCrums">
+                <h1>4 en línea</h1>
+                <p>Juegos > Juegos clásicos > 4 en línea</p>
+            </div>
+
+        </div>
+        <div class="containerRedesJuego">
+            <div  class="logoRedesJuego">
+                <img  class="redesJuego" src="./img/uim_whatsapp.svg" alt="">
+            </div>
+            <div  class="logoRedesJuego">
+                <img  class="redesJuego" src="./img/mdi_gmail.svg" alt="">
+            </div>
+            <div  class="logoRedesJuego">
+                <img  class="facebook" src="./img/facebook.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+        <div class="juego">
+            <div class="contenedorJuego">
+    
+                <div>
+                    <img src="./img/playJuego.svg" alt="">
+                    <button  class="btn jugar btnJugar btnPlay"><p>Jugar</p></button>
+                </div>
+            </div>
+        </div>
+    
+    <div class="contendedorGaleria"> 
+        <div class="galeria">
+            <div>
+                <img src="./img/galeriaHallowen1.png" alt="">
+            </div>
+            <div>
+                <img src="./img/galeriaHallowen2.png" alt="">
+            </div>
+            <div>
+                <img src="./img/galeriaHallowen3.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedorTexto">
+        <h1>¿Como se juega?</h1>
+        <p>En cada turno cada jugador coloca una ficha de su personaje en una columna y esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del personaje elegido seguidas en horizontal, vertical u oblicuo gana. Si nadie lo consigue la partida termina en empate.</p>
+    </div>
+
+    <h1 class="comentariosH1">Comentarios</h1>
+    <div class="contenedorComentarios">
+        <div class="usuarioComentario">
+            <img src="./img/cometUsuario.svg" alt="">
+        </div>
+        <input class="comentarioGlobal" placeholder="Deja tu comentario aqui...">
+        </input>
+    </div>
+
+    <hr class="divideComentario">
+
+    <div class="comentariosOtros">
+        <div class="contenedorIMGComentario">
+            <div class="usuarioComentario">
+                <img src="./img/comentUser2.svg" alt="">
+            </div>
+            <div class="contendorDatos">
+                <div class="contenedoNombreFecha">
+                    <h1>Messi</h1>
+                    <p>Hace 8 meses</p>
+                </div>
+                <p>El juego está INCREIBLE!!</p>
+            </div>
+        </div>
+        <div class="meGusta">
+            <p>3 me gusta</p>
+            <div>
+                <img src="./img/like.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="comentariosOtros">
+        <div class="contenedorIMGComentario">
+            <div class="usuarioComentario">
+                <img src="./img/comentUser3.svg" alt="">
+            </div>
+            <div class="contendorDatos">
+                <div class="contenedoNombreFecha">
+                    <h1>Tini</h1>
+                    <p>Hace 10 meses</p>
+                </div>
+                <p>Es buenisimo</p>
+            </div>
+        </div>
+        <div class="meGusta">
+            <p>4 me gusta</p>
+            <div>
+                <img src="./img/like.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            
+            <div class="seccion">
+                    <h1 class="siguenos"> Siguenos!</h1>
+                <div class="containerRedes">
+                    
+                    <div class="logoRedes">
+                        <img class="redes" src="img/logoFB.svg" alt="">
+                    </div>
+                    <div class="logoRedes">
+                        <img class="redes" src="img/logoTW.svg" alt="">
+                    </div>
+                </div>
+                <div class="ubicacion">
+                    <p>Av. del Valle 445</p>
+                    <p>Tandil, Buenos Aires.</p>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccion">
+                <h1> Ayuda</h1>
+                <p>Preguntas frecuentes</p>
+                <p>Términos y condiciones</p>
+                <p>Soporte</p>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccion">
+                <h1>Categorías</h1>
+                <div class="divCategoria">
+                    <div class="listadoCategorias"> 
+                        <p>Acción </p>
+                        <p>Aventura</p>
+                        <p>Carreras</p>
+                        <p>Clásicos</p>
+                        <p>Deportes</p>
+                        <p>Escape</p>
+                    </div>
+                    <div>
+                        <p>Estrategia</p>
+                        <p>Educativos</p>
+                        <p>Puzzle</p>
+                        <p>Pool</p>
+                        <p>Multijugador</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccionUltimo">
+                <h1> Acerca del sitio</h1>
+                <p>Accesibilidad</p>
+                <p>Política de copyright</p>
+                <p>Política de privacidad</p>
+                <p>Contacto</p>
+            </div>
+        </div>
+        <p class="copyright">Copyright Juegos Arcade © 2022 All right reserved</p>
+    </footer>
+</main>
