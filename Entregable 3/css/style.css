@@ -586,6 +586,12 @@ h1{
     height: 640px;
     justify-content: center;
     padding-top: 32px;
+    background-color: red;
+}
+
+.canvasJuego{
+    margin-left: 250px;  
+    margin-top: 32px;
 }
 
 .containerRedesJuego{
