@@ -14,8 +14,8 @@ class Circle extends Figure{
     }
     setPosition(x, y){
         var rect = canvas.getBoundingClientRect();
-        this.posX = x - rect.left ;
-        this.posY = y - rect.top - this.radius/2;
+        this.posX = x - rect.left - 80/2;
+        this.posY = y - rect.top - 80/2;
 
     }
 
@@ -25,8 +25,8 @@ class Circle extends Figure{
 
     isPointInside(x,y){
         var rect = canvas.getBoundingClientRect();
-        let _x = this.posX - x + rect.left;
-        let _y = this.posY - y + rect.top;
+        let _x = this.posX - x + rect.left + this.radius/2;
+        let _y = this.posY - y + rect.top + this.radius/2;
         return Math.sqrt(_x * _x  + _y * _y) < this.radius;
 
     }
