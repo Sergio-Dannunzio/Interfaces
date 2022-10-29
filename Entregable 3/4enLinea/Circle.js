@@ -2,21 +2,15 @@ class Circle extends Figure{
     constructor(posX,posY,radius,fill,context){
         super(posX,posY,fill,context);
         this.radius = radius;
+        this.img = new Image();
+        const imageSrc = 'img/4enLinea/Player1.png';
+        this.img.src = imageSrc;
     }
 
     draw(){
-        super.draw();
-        this.ctx.beginPath();
-        this.ctx.arc(this.posX,this.posY, this.radius, 0, 2 * Math.PI);
-        this.ctx.fill();
 
+        ctx.drawImage(this.img, this.posX , this.posY , 80, 80);
 
-        if(this.resaltado === true){
-            this.ctx.strokeStyle = this.resaltadoEstilo;
-            this.ctx.lineWidth = 5;
-            this.ctx.stroke();
-        }
-        this.ctx.closePath();
     }
     setPosition(x, y){
         var rect = canvas.getBoundingClientRect();
