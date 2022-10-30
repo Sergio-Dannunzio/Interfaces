@@ -1,9 +1,8 @@
 class Circle extends Figure{
-    constructor(posX,posY,radius,fill,context){
-        super(posX,posY,fill,context);
+    constructor(posX,posY,radius,imageSrc,context){
+        super(posX,posY,imageSrc,context);
         this.radius = radius;
         this.img = new Image();
-        const imageSrc = 'img/4enLinea/Player1.png';
         this.img.src = imageSrc;
     }
 

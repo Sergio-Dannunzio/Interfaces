@@ -3,8 +3,8 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
-const CANT_FIG = 5; 
-
+const CANT_FIG_P1 = 5; 
+const CANT_FIG_P2 = 10; 
 let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
@@ -19,13 +19,16 @@ function addFigure(){
         addCircle();
     //}
     drawFigure();
+    
 }
 
 function drawFigure(){
     clearCanvas();
+    draw(row = 6, col = 7);
     for (let i = 0; i < figures.length; i++) {
        figures[i].draw();
     }
+    
 }
 /*
 function addReact(){
@@ -41,9 +44,16 @@ function addCircle() {
     let posX = Math.round(Math.random() * canvasWidth);
     let posY = Math.round(Math.random() * canvasHeight);
     let color = randomRGBA();
-
-    let circle = new Circle(posX,posY,50, color,ctx);
-    figures.push(circle);
+    
+    if (figures.length < CANT_FIG_P1) {
+        let circle = new Circle(posX,posY,50, 'img/4enLinea/Player1.png',ctx);
+        figures.push(circle);
+                
+    }else if(figures.length < CANT_FIG_P2){
+        let circle = new Circle(posX,posY,50, 'img/4enLinea/Player2.png',ctx);
+        figures.push(circle);
+    }
+    
 }
 
 
@@ -88,6 +98,11 @@ function addFicha(cant) {
 
     for (let i = 0; i < rows; i++) {
         for (let index = 0; index < max; index++) {
+            if (index < CANT_FIG_P1) {
+                
+            }else if(index < CANT_FIG_P2){
+
+            }
             let circle = new Circle(posX,posY,50, color,ctx);
             y += 40;
             figures.push(circle);
@@ -98,7 +113,7 @@ function addFicha(cant) {
 }
 
 function addTablero(col,row){
-
+    //drawFigure()
     for (let index = 0; index < row; index++) {
         let f = [];
         for (let index = 0; index < col; index++) {
@@ -113,7 +128,7 @@ function addTablero(col,row){
 }
 
 function draw() {
-    clearCanvas();
+    //clearCanvas();
     let posX = 250;
     let posY = 50;
     for (let i = 0; i < row; i++) {
@@ -141,11 +156,12 @@ function randomRGBA(){
 
 function addFigures(){
     addFigure();
-    if(figures.length < CANT_FIG){
-        console.log(figures.length)
+    if(figures.length < CANT_FIG_P2){
+        console.log(figures.length + "asd")
         addFigures();
         //setTimeout(addFigures, 333);
     }
+    
 }
 /*
 setTimeout(() => {
@@ -165,8 +181,8 @@ function findClickedFigure(x,y){
 
 function init() {
     addTablero(row = 7, col = 6);
-    draw(row = 6, col = 7);
-    //addFigures();
+    addFigures();
+    
     //setInterval(draw, 500);
     //setTimeout(addFigures, 333);
 }
