@@ -8,6 +8,8 @@ const CANT_FIG = 5;
 let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
+var tablero = [];
+var chips = [];
 
 function addFigure(){
     //if(Math.random() > 0.5){
@@ -78,6 +80,57 @@ function clearCanvas(){
     ctx.fillRect(0,0,canvasWidth,canvasHeight);
 }
 
+function addFicha(cant) {
+    let posX = 50;
+    let posY = 50;
+    let rows = cant / 11;
+    let max = cant / rows;
+
+    for (let i = 0; i < rows; i++) {
+        for (let index = 0; index < max; index++) {
+            let circle = new Circle(posX,posY,50, color,ctx);
+            y += 40;
+            figures.push(circle);
+        }
+        y = 50;
+        x += 60;
+    }
+}
+
+function addTablero(col,row){
+
+    for (let index = 0; index < row; index++) {
+        let f = [];
+        for (let index = 0; index < col; index++) {
+            let img = new Image();
+            img.src = './img/celda.svg';
+            f.push(img);
+        }
+        console.log(f);
+        tablero.push(f);
+    }
+
+}
+
+function draw() {
+    clearCanvas();
+    let posX = 250;
+    let posY = 50;
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            img = tablero[i][j];
+            console.log("soy img", img);
+            ctx.drawImage(img, posX, posY, 50, 50);
+            posX += 50;
+        }
+        posX = 250;
+        posY += 50;
+    }
+
+}
+
+
+
 function randomRGBA(){
     let r = Math.round(Math.random() * 255);
     let g = Math.round(Math.random() * 255);
@@ -94,11 +147,11 @@ function addFigures(){
         //setTimeout(addFigures, 333);
     }
 }
-
+/*
 setTimeout(() => {
     addFigures();
 }, 333);
-
+*/
 function findClickedFigure(x,y){
     for (let i = 0; i < figures.length; i++) {
         const element = figures[i];
@@ -109,6 +162,16 @@ function findClickedFigure(x,y){
         }
     }
 }
+
+function init() {
+    addTablero(row = 7, col = 6);
+    draw(row = 6, col = 7);
+    //addFigures();
+    //setInterval(draw, 500);
+    //setTimeout(addFigures, 333);
+}
+
+init();
 
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
