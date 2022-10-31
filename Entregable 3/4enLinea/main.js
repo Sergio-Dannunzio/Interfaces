@@ -3,8 +3,7 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
-const CANT_FIG_P1 = 5; 
-const CANT_FIG_P2 = 10; 
+const CANT_FICHAS = 20; 
 let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
@@ -12,51 +11,109 @@ var tablero = [];
 var chips = [];
 
 function addFigure(){
-    //if(Math.random() > 0.5){
-       // addReact();
-    //}
-    //else{
-        addCircle();
-    //}
+
+    addCircle();
+
     drawFigure();
     
 }
 
 function drawFigure(){
     clearCanvas();
-    draw(row = 6, col = 7);
+    draw(row = 8, col = 9);
     for (let i = 0; i < figures.length; i++) {
        figures[i].draw();
     }
     
 }
-/*
-function addReact(){
-    let posX = Math.round(Math.random() * canvasWidth);
-    let posY = Math.round(Math.random() * canvasHeight);
-    let color = randomRGBA();
-
-    let react = new React(posX,posY, 20,20,color,ctx);  //genera la nueva instancia
-    figures.push(react);
-}*/
 
 function addCircle() {
-    let posX = Math.round(Math.random() * canvasWidth);
-    let posY = Math.round(Math.random() * canvasHeight);
-    let color = randomRGBA();
+    let posX = 50;
+    let posYJ1 = 0;
+    let posXJ2 = 900;
+    let posYJ2 = 0;
     
-    if (figures.length < CANT_FIG_P1) {
-        let circle = new Circle(posX,posY,50, 'img/4enLinea/Player1.png',ctx);
-        figures.push(circle);
-                
-    }else if(figures.length < CANT_FIG_P2){
-        let circle = new Circle(posX,posY,50, 'img/4enLinea/Player2.png',ctx);
-        figures.push(circle);
+    for (let index = 0; index < CANT_FICHAS; index++) {
+        let fichap1 = new Ficha(posX,posYJ1,45, 'img/4enLinea/Player1.png',ctx);
+        figures.push(fichap1);
+        posYJ1+=25;
+
+        let fichap2 = new Ficha(posXJ2,posYJ2,45, 'img/4enLinea/Player2.png',ctx);
+        figures.push(fichap2);
+        posYJ2 += 25;
     }
     
 }
 
+function clearCanvas(){
+    ctx.fillStyle = '#581578'
+    ctx.fillRect(0,0,canvasWidth,canvasHeight);
+}
 
+
+function addTablero(col,row){
+    //drawFigure()
+    for (let index = 0; index < row; index++) {
+        let f = [];
+        for (let index = 0; index < col; index++) {
+            let img = new Image();
+            img.src = './img/celda.svg';
+            f.push(img);
+        }
+        console.log(f);
+        tablero.push(f);
+    }
+
+}
+
+function draw() {
+    //clearCanvas();
+    let posX = 250;
+    let posY = 70;
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            img = tablero[i][j];
+            ctx.drawImage(img, posX, posY, 55, 55);
+            posX += 55;
+        }
+        posX = 250;
+        posY += 55;
+    }
+
+}
+
+
+
+function addFigures(){
+    addFigure();
+    if(figures.length < CANT_FICHAS){
+        console.log(figures.length + "asd")
+        addFigures();
+        //setTimeout(addFigures, 333);
+    }
+    
+}
+
+function findClickedFigure(x,y){
+    for (let i = 0; i < figures.length; i++) {
+        const element = figures[i];
+        figures.slice(1,element);
+        if(element.isPointInside(x,y)){
+            figures.push(element);
+            return element;
+        }
+    }
+}
+
+function init() {
+    addTablero(row = 9, col = 8);
+    addFigures();
+    
+    //setInterval(draw, 500);
+    //setTimeout(addFigures, 333);
+}
+
+init();
 function onMouseDown(e){
     isMouseDown = true;
 
@@ -84,110 +141,6 @@ function onMouseMove(e){
         drawFigure();
     }
 }
-
-function clearCanvas(){
-    ctx.fillStyle = '#581578'
-    ctx.fillRect(0,0,canvasWidth,canvasHeight);
-}
-
-function addFicha(cant) {
-    let posX = 50;
-    let posY = 50;
-    let rows = cant / 11;
-    let max = cant / rows;
-
-    for (let i = 0; i < rows; i++) {
-        for (let index = 0; index < max; index++) {
-            if (index < CANT_FIG_P1) {
-                
-            }else if(index < CANT_FIG_P2){
-
-            }
-            let circle = new Circle(posX,posY,50, color,ctx);
-            y += 40;
-            figures.push(circle);
-        }
-        y = 50;
-        x += 60;
-    }
-}
-
-function addTablero(col,row){
-    //drawFigure()
-    for (let index = 0; index < row; index++) {
-        let f = [];
-        for (let index = 0; index < col; index++) {
-            let img = new Image();
-            img.src = './img/celda.svg';
-            f.push(img);
-        }
-        console.log(f);
-        tablero.push(f);
-    }
-
-}
-
-function draw() {
-    //clearCanvas();
-    let posX = 250;
-    let posY = 50;
-    for (let i = 0; i < row; i++) {
-        for (let j = 0; j < col; j++) {
-            img = tablero[i][j];
-            console.log("soy img", img);
-            ctx.drawImage(img, posX, posY, 50, 50);
-            posX += 50;
-        }
-        posX = 250;
-        posY += 50;
-    }
-
-}
-
-
-
-function randomRGBA(){
-    let r = Math.round(Math.random() * 255);
-    let g = Math.round(Math.random() * 255);
-    let b = Math.round(Math.random() * 255);
-    let a = Math.round(Math.random() * 255);
-    return `rgba(${r},${g},${b},${a})`;
-}
-
-function addFigures(){
-    addFigure();
-    if(figures.length < CANT_FIG_P2){
-        console.log(figures.length + "asd")
-        addFigures();
-        //setTimeout(addFigures, 333);
-    }
-    
-}
-/*
-setTimeout(() => {
-    addFigures();
-}, 333);
-*/
-function findClickedFigure(x,y){
-    for (let i = 0; i < figures.length; i++) {
-        const element = figures[i];
-        figures.slice(1,element);
-        if(element.isPointInside(x,y)){
-            figures.push(element);
-            return element;
-        }
-    }
-}
-
-function init() {
-    addTablero(row = 7, col = 6);
-    addFigures();
-    
-    //setInterval(draw, 500);
-    //setTimeout(addFigures, 333);
-}
-
-init();
 
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
