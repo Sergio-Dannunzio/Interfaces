@@ -106,27 +106,73 @@
         </div>
     </div>
 
-    <img src="img/4enLinea/Player1.png" alt="" class="noMostrar">
-    <img src="./img/celda.svg" alt="" class="noMostrar">
+    <img src="img/4enLinea/celda.svg" alt="" class="noMostrar">
 
-    <div class="canvasJuego">
+    <div id="divCanvas" class="canvasJuego noMostrar">
         <canvas id="canvas" width="1024" height="530"></canvas>
     </div>
 
-        <!-- <div class="juego">
-            <canvas id="canvas" width="1024" height="530"></canvas>
-           <div class="contenedorJuego">
-    
-                <canvas id="myCanvas" width="1230" height="640"></canvas>
-            
+    <div  id="juego" class="">
+        <div class="juego">
+            <div class="contenedorJuego">
                 <div>
-                    <img src="./img/playJuego.svg" alt="">
-                    <button  class="btn jugar btnJugar btnPlay"><p>Jugar</p></button>
+                    <img src="img/4enLinea/playJuego.svg" alt="">
+                    <button id="jugar"  class="btn jugar btnJugar btnPlay"><p>Jugar</p></button>
                 </div>
             </div>
-        -->
         </div>
-    
+    </div>
+
+    <div id="seleccionarJuego" class="noMostrar">
+        <div class="juego">
+            <div class="contenedorJuegoSegundaPantalla">
+                <div class="elegirTablero">
+                    <h1>¿Que desea jugar?</h1>
+                    <select name="" id="">
+                        <option value="4">4 en línea</option>
+                        <option value="5">5 en línea</option>
+                        <option value="6">6 en línea</option>
+                    </select>
+                </div>
+                <div class="contenedorJugadores">
+                    <div >
+                        <h1>Jugador 1</h1>
+                        <h2>Seleccione su ficha:</h2>
+                        <div>
+                            <input type="image"  src="img/4enLinea/ficha1.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha2.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha3.svg" class="inputImage" >
+                        </div>
+                        <div>
+                            <input type="image"  src="img/4enLinea/ficha4.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha5.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha6.svg" class="inputImage" >
+                        </div>
+                        <h2>Elija su nombre:</h2>
+                        <input type="text" name="" id="" placeholder="jugador 1">
+                    </div>
+                    <div>
+                        <h1>Jugador 2</h1>
+                        <h2>Seleccione su ficha:</h2>
+                        <div>
+                            <input type="image"  src="img/4enLinea/ficha1.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha2.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha3.svg" class="inputImage" >
+                        </div>
+                        <div>
+                            <input type="image"  src="img/4enLinea/ficha4.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha5.svg" class="inputImage" >
+                            <input type="image"  src="img/4enLinea/ficha6.svg" class="inputImage" >
+                        </div>
+                        <h2>Elija su nombre:</h2>
+                        <input type="text" name="" id="" placeholder="jugador 2">
+                    </div>
+                </div>
+                <button id="aceptarSeleccion" class="btn jugar btnJugar "><p>Aceptar</p></button>
+            </div>
+        </div>
+    </div>
+
     <div class="contendedorGaleria"> 
         <div class="galeria">
             <div>

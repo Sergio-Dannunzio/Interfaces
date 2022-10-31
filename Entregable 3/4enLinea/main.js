@@ -3,7 +3,7 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
-const CANT_FICHAS = 20; 
+
 let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
@@ -12,7 +12,7 @@ var chips = [];
 
 function addFigure(){
 
-    addCircle();
+    addCircle( CANT_FICHAS = 20);
 
     drawFigure();
     
@@ -27,18 +27,18 @@ function drawFigure(){
     
 }
 
-function addCircle() {
+function addCircle(CANT_FICHAS) {
     let posX = 50;
     let posYJ1 = 0;
     let posXJ2 = 900;
     let posYJ2 = 0;
     
     for (let index = 0; index < CANT_FICHAS; index++) {
-        let fichap1 = new Ficha(posX,posYJ1,45, 'img/4enLinea/Player1.png',ctx);
+        let fichap1 = new Ficha(posX,posYJ1,45, 'img/4enLinea/ficha3.svg',ctx);
         figures.push(fichap1);
         posYJ1+=25;
 
-        let fichap2 = new Ficha(posXJ2,posYJ2,45, 'img/4enLinea/Player2.png',ctx);
+        let fichap2 = new Ficha(posXJ2,posYJ2,45, 'img/4enLinea/ficha5.svg',ctx);
         figures.push(fichap2);
         posYJ2 += 25;
     }
@@ -57,12 +57,13 @@ function addTablero(col,row){
         let f = [];
         for (let index = 0; index < col; index++) {
             let img = new Image();
-            img.src = './img/celda.svg';
+            img.src = 'img/4enLinea/celda.svg';
             f.push(img);
         }
         console.log(f);
         tablero.push(f);
     }
+
 
 }
 
@@ -79,6 +80,9 @@ function draw() {
         posX = 250;
         posY += 55;
     }
+
+
+
 
 }
 

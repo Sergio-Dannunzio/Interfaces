@@ -32,10 +32,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let categorias = document.getElementById("categorias");
             if (categorias.className!="noMostrar") {
             categorias.className = "noMostrar";
-        }else{
-            categorias.className = "";
+            }else{
+                categorias.className = "";
+            }
         }
-    }
     
     function mostrarUsuarioCategorias(){
         let categorias = document.getElementById("usuarioCategorias");

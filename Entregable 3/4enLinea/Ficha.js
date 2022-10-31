@@ -39,7 +39,7 @@ class Ficha{
     setPosition(x, y){
         var rect = canvas.getBoundingClientRect();
         this.posX = x - rect.left - 45/2 ;
-        this.posY = y - rect.top - 45 - 45/2;
+        this.posY = y - rect.top - 45/2;
 
     }
 
@@ -53,8 +53,8 @@ class Ficha{
 
     isPointInside(x,y){
         var rect = canvas.getBoundingClientRect();
-        let _x = this.posX - x + rect.left + this.radius;
-        let _y = this.posY - y + rect.top + this.radius ;
+        let _x = this.posX - x + rect.left ;
+        let _y = this.posY - y + rect.top  ;
         return Math.sqrt(_x * _x  + _y * _y) < this.radius;
     }
 
