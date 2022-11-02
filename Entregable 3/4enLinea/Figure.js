@@ -1,4 +1,4 @@
-class Figure{
+/*class Figure{
     constructor(posX,posY,fill,context){
         this.posX = posX;
         this.posY = posY;
@@ -50,4 +50,4 @@ class Figure{
 
 
 
-}
+}*/

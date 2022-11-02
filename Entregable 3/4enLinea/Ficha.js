@@ -1,12 +1,8 @@
 class Ficha{
-    constructor(posX,posY,radius,imageSrc,context,fill){
+    constructor(posX,posY,radius,imageSrc){
         this.posX = posX;
         this.posY = posY;
         this.radius = radius;
-        this.ctx = context;
-        this.fill = fill;
-        this.resaltado = false;
-        this.resaltadoEstilo = 'red';
         this.img = new Image();
         this.img.src = imageSrc;
     }
@@ -53,8 +49,8 @@ class Ficha{
 
     isPointInside(x,y){
         var rect = canvas.getBoundingClientRect();
-        let _x = this.posX - x + rect.left ;
-        let _y = this.posY - y + rect.top  ;
+        let _x = this.posX - x + rect.left + this.radius;
+        let _y = this.posY - y + rect.top + this.radius;
         return Math.sqrt(_x * _x  + _y * _y) < this.radius;
     }
 

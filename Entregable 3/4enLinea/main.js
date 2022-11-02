@@ -3,6 +3,47 @@ let ctx = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
+let Btnficha1 = document.querySelector('#Btnficha1');
+let img1 = document.querySelector('#ficha1');
+
+let Btnficha2 = document.querySelector('#Btnficha2');
+let img2 = document.querySelector('#ficha2');
+
+let Btnficha3 = document.querySelector('#Btnficha3');
+let img3 = document.querySelector('#ficha3');
+
+let Btnficha4 = document.querySelector('#Btnficha4');
+let img4 = document.querySelector('#ficha4');
+
+let Btnficha5 = document.querySelector('#Btnficha5');
+let img5 = document.querySelector('#ficha5');
+
+let Btnficha6 = document.querySelector('#Btnficha6');
+let img6 = document.querySelector('#ficha6');
+
+let Btnficha7 = document.querySelector('#Btnficha7');
+let img7 = document.querySelector('#ficha7');
+
+let Btnficha8 = document.querySelector('#Btnficha8');
+let img8 = document.querySelector('#ficha8');
+
+let Btnficha9 = document.querySelector('#Btnficha9');
+let img9 = document.querySelector('#ficha9');
+
+let Btnficha10 = document.querySelector('#Btnficha10');
+let img10 = document.querySelector('#ficha10');
+
+let Btnficha11 = document.querySelector('#Btnficha11');
+let img11 = document.querySelector('#ficha11');
+
+let Btnficha12 = document.querySelector('#Btnficha12');
+let img12 = document.querySelector('#ficha12');
+
+
+let aceptarSeleccion = document.querySelector('#aceptarSeleccion');
+
+//console.log(img1.src);
+//console.log(img4.src);
 
 let figures = [];
 let lastClickedFigure = null;
@@ -10,14 +51,82 @@ let isMouseDown = false;
 var tablero = [];
 var chips = [];
 
-function addFigure(){
+let juego = new Juego();
+//setInterval( () => {
+    console.log("soy desde main")
+
+    Btnficha1.addEventListener('click', () => {
+        juego.player1.setFicha(img1.src);
+    });
+
+    Btnficha2.addEventListener('click', () => {
+        juego.player1.setFicha(img2.src);
+    });
+
+    Btnficha3.addEventListener('click', () => {
+        juego.player1.setFicha(img3.src);
+    });
+
+    Btnficha4.addEventListener('click', () => {
+        juego.player1.setFicha(img4.src);
+    });
+
+    Btnficha5.addEventListener('click', () => {
+        juego.player1.setFicha(img5.src);
+    });
+
+    Btnficha6.addEventListener('click', () => {
+        juego.player1.setFicha(img6.src);
+    });
+
+    Btnficha7.addEventListener('click', () => {
+        juego.player2.setFicha(img7.src);
+
+    });
+
+    Btnficha8.addEventListener('click', () => {
+        juego.player2.setFicha(img8.src);
+
+    });
+
+    Btnficha9.addEventListener('click', () => {
+        juego.player2.setFicha(img9.src);
+
+    });
+
+    Btnficha10.addEventListener('click', () => {
+        juego.player2.setFicha(img10.src);
+
+    });
+
+    Btnficha11.addEventListener('click', () => {
+        juego.player2.setFicha(img11.src);
+
+    });
+
+    Btnficha12.addEventListener('click', () => {
+        juego.player2.setFicha(img12.src);
+
+    });
+
+    aceptarSeleccion.addEventListener("click", ()=> {
+        console.log("aceptar")
+        
+        juego.init();
+
+        setInterval(()=> {
+            juego.draw()
+        })
+        
+    })
+/*function addFigure(){
 
     addCircle( CANT_FICHAS = 20);
 
     drawFigure();
     
-}
-
+}*/
+/*
 function drawFigure(){
     clearCanvas();
     draw(row = 8, col = 9);
@@ -25,8 +134,8 @@ function drawFigure(){
        figures[i].draw();
     }
     
-}
-
+}*/
+/*
 function addCircle(CANT_FICHAS) {
     let posX = 50;
     let posYJ1 = 0;
@@ -43,14 +152,14 @@ function addCircle(CANT_FICHAS) {
         posYJ2 += 25;
     }
     
-}
-
+}*/
+/*
 function clearCanvas(){
     ctx.fillStyle = '#581578'
     ctx.fillRect(0,0,canvasWidth,canvasHeight);
-}
+}*/
 
-
+/*
 function addTablero(col,row){
     //drawFigure()
     for (let index = 0; index < row; index++) {
@@ -84,10 +193,10 @@ function draw() {
 
 
 
-}
+}*/
 
 
-
+/*
 function addFigures(){
     addFigure();
     if(figures.length < CANT_FICHAS){
@@ -96,7 +205,7 @@ function addFigures(){
         //setTimeout(addFigures, 333);
     }
     
-}
+}*/
 
 function findClickedFigure(x,y){
     for (let i = 0; i < figures.length; i++) {
@@ -109,16 +218,14 @@ function findClickedFigure(x,y){
     }
 }
 
-function init() {
+/*function init() {
     addTablero(row = 9, col = 8);
     addFigures();
     
     //setInterval(draw, 500);
     //setTimeout(addFigures, 333);
-}
-
-init();
-function onMouseDown(e){
+}*/
+/*function onMouseDown(e){
     isMouseDown = true;
 
     if(lastClickedFigure != null){
@@ -148,4 +255,4 @@ function onMouseMove(e){
 
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
-canvas.addEventListener('mousemove', onMouseMove, false);
+canvas.addEventListener('mousemove', onMouseMove, false);*/
