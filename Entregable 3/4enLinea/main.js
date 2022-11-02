@@ -40,6 +40,9 @@ let Btnficha12 = document.querySelector('#Btnficha12');
 let img12 = document.querySelector('#ficha12');
 
 
+let nombreJ1 = document.querySelector('#nombreJ1');
+let nombreJ2 = document.querySelector('#nombreJ2');
+
 let aceptarSeleccion = document.querySelector('#aceptarSeleccion');
 
 //console.log(img1.src);
@@ -113,7 +116,8 @@ let juego = new Juego();
         console.log("aceptar")
         
         juego.init();
-
+        juego.player1.setName(nombreJ1.value);
+        juego.player2.setName(nombreJ2.value);
         setInterval(()=> {
             juego.draw()
         })

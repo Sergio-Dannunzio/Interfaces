@@ -51,6 +51,7 @@ class Juego {
     
     draw() {
         this.clearCanvas();
+
         var row = 8;
         var col = 9;
         let posX = 250;
@@ -65,6 +66,12 @@ class Juego {
             posX = 250;
             posY += 50;
         }
+
+        ctx.font = "50px  sans-serif";
+        ctx.fillStyle = "white";
+        ctx.fillText(this.player1.getName(), 50, 50);
+        ctx.fillText(this.player2.getName(), 860, 50);
+        
         console.log("me hago bucle")
         this.player1.drawFicha();
         this.player2.drawFicha();
@@ -74,8 +81,10 @@ class Juego {
     init() {
         console.log("init tablero")
         this.addTablero(9,8);
-        this.player1.addFichas(12, 25);
-        this.player2.addFichas(970, 12);
+        //this.player1.setName("pepe");
+        //this.player2.setName("pepa");
+        this.player1.addFichas(80, 70);
+        this.player2.addFichas(890, 70);
         this.player1.init();
         this.player2.init();
         //img1.addEventListener("click", this.player1.setFicha(img1.src));

@@ -14,6 +14,14 @@ class Jugador{
         this.fichas = cargarFichas(cant_fichas, img);
     }
 
+    getName(){
+        return this.name;
+    }
+
+    setName(name){
+        this.name = name;
+    }
+
     setTurn(bool) {
         this.turno = bool;
     }
