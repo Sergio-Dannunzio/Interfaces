@@ -515,6 +515,17 @@ h1{
 }
 
 /********4 en linea*****************/
+#btnReset{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: white solid 1px;
+    left: 37.5%;
+    top: 71%;
+}
 
 .breadCrums{
     background-color:#581578;

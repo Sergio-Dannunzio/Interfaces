@@ -45,6 +45,8 @@ let nombreJ2 = document.querySelector('#nombreJ2');
 
 let aceptarSeleccion = document.querySelector('#aceptarSeleccion');
 
+let btnReset = document.querySelector("#btnReset");
+
 //console.log(img1.src);
 //console.log(img4.src);
 
@@ -111,13 +113,17 @@ let juego = new Juego();
         juego.player2.setFicha(img12.src);
 
     });
-
+    btnReset.addEventListener("click", () => {
+        juego.resetGame();
+    });
     aceptarSeleccion.addEventListener("click", ()=> {
         console.log("aceptar")
         
         juego.init();
         juego.player1.setName(nombreJ1.value);
         juego.player2.setName(nombreJ2.value);
+        juego.tiempo = 60;
+        juego.loop();
         setInterval(()=> {
             juego.draw()
         })

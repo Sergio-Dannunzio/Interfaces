@@ -30,6 +30,10 @@ class Jugador{
         this.img = imgSrc;
     }
 
+    resetPlayer(){
+        this.fichas = [];
+    }
+
     addFichas(x, posYJ1) {
         //let rows = cant / 11;
         //let max = cant / rows;

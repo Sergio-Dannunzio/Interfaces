@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let btnUsuario = document.getElementById("btnUsuario");
     let btnPlay = document.getElementById("jugar");
     let btnAceptarSeleccion= document.getElementById("aceptarSeleccion");
+    let btnReset = document.querySelector("#btnReset");
 
     function mostrarCategorias() {
         let categorias = document.getElementById("categorias");
@@ -45,6 +46,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
             seleccionar.className = "";
         }
     }
+
+    function irSeleccionarJuego(){
+        let seleccionar = document.getElementById("seleccionarJuego");
+        let canvas = document.getElementById("divCanvas");
+
+        if(canvas.className != "noMostrar"){
+            seleccionar.className = "";
+            canvas.className = "noMostrar";
+        }else{
+            canvas.className = "";
+        }
+    }
+    btnReset.addEventListener('click' , irSeleccionarJuego);
     btnUsuario.addEventListener('click' , mostrarUsuarioCategorias);
     btnFlechaCategorias.addEventListener('click' , mostrarUsuarioCategorias);
     btnCategorias.addEventListener('click' , mostrarCategorias);
