@@ -29,6 +29,10 @@ class Jugador{
         this.turno = bool;
     }
 
+    getImg(){
+        return this.img;
+    }
+
     setFicha(imgSrc){
         this.img = imgSrc;
     }
