@@ -74,7 +74,7 @@ let juego = new Juego();
 
     Btnficha1.addEventListener('click', () => {
         if(juego.player1.getImg() == null){
-        juego.player1.setFicha(img1.src);
+            juego.player1.setFicha(img1.src);
             img1.src = img1Resaltada.src;
         }
     });
