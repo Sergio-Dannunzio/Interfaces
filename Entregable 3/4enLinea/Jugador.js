@@ -7,11 +7,14 @@ class Jugador{
     CANT_FICHAS = 15;
     lastClickedFigure = null;
     isMouseDown = false;
+    fichaX;
+    fichaY;
     contructor(img, name, cant_fichas) {
         this.img = img;
         this.turno = false;
         this.name = name;
         this.fichas = cargarFichas(cant_fichas, img);
+        this.fichaActual = new Ficha(0,0,0,null);
     }
 
     getName(){
@@ -43,7 +46,7 @@ class Jugador{
                     let ficha = new Ficha(x, posYJ1, 24, this.img);
                     posYJ1+=30;
                     this.fichas.push(ficha);
-                    console.log("asd")
+                    //console.log("asd")
                 }
                 this.posYJ1+=25;
             //}
@@ -53,7 +56,7 @@ class Jugador{
     }
 
     drawFicha() {
-        console.log(this.fichas)
+        //console.log(this.fichas)
         for (let index = this.fichas.length - 1; index >= 0; index--) {
             let ficha = this.fichas[index];
             ficha.draw();
@@ -72,7 +75,6 @@ class Jugador{
         console.log(clickFig)
         console.log(e.layerX, e.layerY)
         if(clickFig != null ){
-            console.log("estoy dentro de on mouse down if")
             clickFig.serResaltado(true);
             this.lastClickedFigure = clickFig; 
         }
@@ -81,27 +83,44 @@ class Jugador{
     }
     
     onMouseUp(e){
-        console.log("estoy dentro de onMouseUp")
+        //console.log("soy mouse up",e.layerX, e.layerY);
+        if(e.layerX > 520  && e.layerY > 200 ){
+            console.log( "dentro if", this.fichas[0].getPosX(), this.fichas[0].getPosY());
+            //this.fichas.slice(1,this.fichas[0]);
+            if(this.getName() == "1"){
+                this.fichas[0].setPosition(e.layerX - 4, e.layerY+403);
+            }
+        }else{
+            if(this.getName() == "1"){
+                this.fichas[0].setPosition( this.fichaX, this.fichaY);
+            }
+            //console.log( "soy mouse up",this.fichas[0].getPosX());
+            //console.log(this.fichaActual.x,this.fichaActual.y)
+            //this.lastClickedFigure.setPosition(this.fichaActual.getPosX(),this.fichaActual.getPosY());
+        }
         this.isMouseDown = false;
     }
     
     onMouseMove(e){
         if(this.isMouseDown == true && this.lastClickedFigure != null){
-            console.log("estoy dentro de onMouseMove")
             this.lastClickedFigure.setPosition(e.layerX,e.layerY);
             this.drawFicha();
         }
     }
 
     findClickedFigure(x,y){
-        console.log(x,y)
-        console.log("soy findClickedFigure", this.fichas[0])
+        //console.log(x,y)
+       // console.log("soy findClickedFigure", this.fichas[0])
         for (let i = 0; i < this.fichas.length; i++) {
             const element = this.fichas[i];
+            this.fichaX = x;
+            this.fichaY = y;
+            //console.log("ffff",this.fichas[0].getPosX(), this.fichas[0].getPosY());
+            //this.fichaActual.setPosition(element.getPosX(), element.getPosY());
             this.fichas.slice(1,element);
             if(element.isPointInside(x,y)){
-                console.log("estoy dentro de isPointInside")
-                this.fichas.push(element);
+                //console.log("estoy dentro de isPointInside")
+                this.fichas.unshift(element);
                 return element;
             }
         }

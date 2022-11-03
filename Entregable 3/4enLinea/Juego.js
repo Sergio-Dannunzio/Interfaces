@@ -88,10 +88,10 @@ class Juego {
             ctx.fillStyle = "white";
             ctx.fillText("Se acabo el tiempo", 400, 30);
         }
-        console.log("me hago bucle")
+        //console.log("me hago bucle")
         this.player1.drawFicha();
         this.player2.drawFicha();
-        console.log("termino bucle")
+        //console.log("termino bucle")
     }
     
     loop() {
@@ -106,7 +106,7 @@ class Juego {
     
     init() {
         
-        console.log("init tablero")
+       // console.log("init tablero")
         this.addTablero(9,8);
         //this.player1.setName("pepe");
         //this.player2.setName("pepa");
@@ -118,7 +118,7 @@ class Juego {
         //img4.addEventListener('click', this.player1.setFicha(img4.src));
         //this.player1.setFicha(img1.src);
         //this.player2.setFicha(img4.src);
-        console.log("termina init")
+        //console.log("termina init")
         
         //this.drawFigure();
     }
