@@ -1,20 +1,19 @@
 "use strict";
 
 class Jugador{
-    img;
-    name;
+
     fichas = [];
     CANT_FICHAS = 15;
-    lastClickedFigure = null;
-    isMouseDown = false;
-    fichaX;
-    fichaY;
+
+
     contructor(img, name, cant_fichas) {
         this.img = img;
         this.turno = false;
         this.name = name;
         this.fichas = cargarFichas(cant_fichas, img);
         this.fichaActual = new Ficha(0,0,0,null);
+        this.ganador = false;
+        this.col = col;
     }
 
     getName(){
@@ -25,8 +24,20 @@ class Jugador{
         this.name = name;
     }
 
-    setTurn(bool) {
+    setColumnas(col){
+        this.col = col;
+    }
+
+    getTurno(){
+        return this.turno;
+    }
+
+    setTurno(bool) {
         this.turno = bool;
+    }
+
+    setGanador(){
+        this.ganador = true;
     }
 
     getImg(){
@@ -39,96 +50,101 @@ class Jugador{
 
     resetPlayer(){
         this.fichas = [];
+        this.ganador = false;
     }
 
     addFichas(x, posYJ1) {
-        //let rows = cant / 11;
-        //let max = cant / rows;
-        //for (let i = 0; i < rows; i++) {
-            // for (let index = 0; index < max; index++) {
+
                 for (let index = 0; index < this.CANT_FICHAS; index++) {
-                    let ficha = new Ficha(x, posYJ1, 24, this.img);
+                    let ficha = new Ficha(x, posYJ1, 24, this.img, this.name);
                     posYJ1+=30;
                     this.fichas.push(ficha);
-                    //console.log("asd")
+
                 }
                 this.posYJ1+=25;
-            //}
-            //y = 50;
-            //x += 60;
-        //}
+
     }
 
     drawFicha() {
-        //console.log(this.fichas)
         for (let index = this.fichas.length - 1; index >= 0; index--) {
             let ficha = this.fichas[index];
             ficha.draw();
         }
     }
 
-    onMouseDown(e){
-        this.isMouseDown = true;
-        console.log("estoy dentro de on mouse down ")
-        if(this.lastClickedFigure != null){
-            this.lastClickedFigure.serResaltado(false);
-            this.lastClickedFigure = null;
+    onMouseDown(e) {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        for (let i = 0; i < this.fichas.length; i++) {
+            if (this.fichas[i].checkSelected(x, y)) {
+                console.log(x)
+                this.fichas[i].setSelected(true);
+                return;
+            } else {
+                this.fichas[i].setSelected(false);
+            }
         }
-        
-        let clickFig = this.findClickedFigure(e.layerX, e.layerY);
-        console.log(clickFig)
-        console.log(e.layerX, e.layerY)
-        if(clickFig != null ){
-            clickFig.serResaltado(true);
-            this.lastClickedFigure = clickFig; 
+
+    }
+
+    onMouseMove(e) {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        for (let i = 0; i < this.fichas.length; i++) {
+            if (this.fichas[i].isSelected(e) && !this.fichas[i].isUsada()) {
+                if (x > 0 && x < canvasWidth && y > 0 && y < canvasHeight) {
+                    this.fichas[i].move(x, y, e);
+                    
+                    return;
+                } else {
+                    this.mouseUp(e);
+                }
+            }
         }
-    
-        this.drawFicha();
     }
     
     onMouseUp(e){
-        //console.log("soy mouse up",e.layerX, e.layerY);
-        if(e.layerX > 520  && e.layerY > 200 ){
-            console.log( "dentro if", this.fichas[0].getPosX(), this.fichas[0].getPosY());
-            //this.fichas.slice(1,this.fichas[0]);
-            if(this.getName() == "1"){
-                this.fichas[0].setPosition(e.layerX - 4, e.layerY+403);
+        let x = e.offsetX;
+        let y = e.offsetY;
+        this.fichas.forEach(chip => {
+            console.log("Asd")
+            if (chip.isSelected()&&!chip.isUsada()) {
+            console.log("soy x" + x)
+            console.log("soy x" + y)
+            if (x > 250 && x < 800 && y > 0 && y < 40 && this.getTurno()) {
+                this.columna = false;
+                console.log("en zona");
+                let posCol = 250;
+                let i = 0;
+                console.log("columna"+this.columna)
+                while (!this.columna && i<= this.col) {
+                    if (x > posCol && x < posCol + 55 && !chip.enJuego) {
+                            console.log(chip);
+                            console.log("ficha insertada en col " + i);
+                            chip.setCol(i);
+                            chip.setUso(true);
+                            chip.setEnJuego(true);
+                            this.columna = true;
+                            console.log("while"+this.columna)
+                        } else {
+                            console.log("soy el else");
+                            posCol += 55;
+                            i++;
+                        }
+                        console.log("finalWhile"+this.columna)
+                    }
+                } else {
+                   chip.returnToPos();
+                }
             }
-        }else{
-            if(this.getName() == "1"){
-                this.fichas[0].setPosition( this.fichaX, this.fichaY);
-            }
-            //console.log( "soy mouse up",this.fichas[0].getPosX());
-            //console.log(this.fichaActual.x,this.fichaActual.y)
-            //this.lastClickedFigure.setPosition(this.fichaActual.getPosX(),this.fichaActual.getPosY());
-        }
-        this.isMouseDown = false;
-    }
-    
-    onMouseMove(e){
-        if(this.isMouseDown == true && this.lastClickedFigure != null){
-            this.lastClickedFigure.setPosition(e.layerX,e.layerY);
-            this.drawFicha();
-        }
+                chip.setSelected(false);
+                this.isMouseDown = false;
+            });
+        
+
     }
 
-    findClickedFigure(x,y){
-        //console.log(x,y)
-       // console.log("soy findClickedFigure", this.fichas[0])
-        for (let i = 0; i < this.fichas.length; i++) {
-            const element = this.fichas[i];
-            this.fichaX = x;
-            this.fichaY = y;
-            //console.log("ffff",this.fichas[0].getPosX(), this.fichas[0].getPosY());
-            //this.fichaActual.setPosition(element.getPosX(), element.getPosY());
-            this.fichas.slice(1,element);
-            if(element.isPointInside(x,y)){
-                //console.log("estoy dentro de isPointInside")
-                this.fichas.unshift(element);
-                return element;
-            }
-        }
-    }
+
     initEvents() {
        canvas.addEventListener('mousedown', (e) => {
             this.onMouseDown(e)
@@ -142,9 +158,6 @@ class Jugador{
     }
 
     init(amountChips, x, y) {
-        //this.addFichas(12, 25);
-        //this.drawFicha();
-        //this.draw();
         this.initEvents();
     }
 }

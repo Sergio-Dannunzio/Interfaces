@@ -636,8 +636,10 @@ h1{
 }
 
 .canvasJuego{
-    margin-left: 250px;  
+    display: flex;
+    justify-content: center;
     margin-top: 32px;
+    margin-bottom: 5.9%;
 }
 
 .containerRedesJuego{

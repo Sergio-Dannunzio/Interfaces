@@ -59,109 +59,33 @@ let aceptarSeleccion = document.querySelector('#aceptarSeleccion');
 
 let btnReset = document.querySelector("#btnReset");
 
-//console.log(img1.src);
-//console.log(img4.src);
 
 let figures = [];
 let lastClickedFigure = null;
 let isMouseDown = false;
 var tablero = [];
 var chips = [];
+let value = 0;
 
-let juego = new Juego();
-//setInterval( () => {
+let juego = new Juego(0);
+console.log(value)
+
     console.log("soy desde main")
-
-    Btnficha1.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img1.src);
-            img1.src = img1Resaltada.src;
-        }
-    });
-
-    Btnficha2.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img2.src);
-            img2.src = img2Resaltada.src;
-        }
-    });
-
-    Btnficha3.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img3.src);
-            img3.src = img3Resaltada.src;
-        }
-    });
-
-    Btnficha4.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img4.src);
-            img4.src = img4Resaltada.src;
-        }
-    });
-
-    Btnficha5.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img5.src);
-            img5.src = img5Resaltada.src;
-        }
-    });
-
-    Btnficha6.addEventListener('click', () => {
-        if(juego.player1.getImg() == null){
-            juego.player1.setFicha(img6.src);
-            img6.src = img6Resaltada.src;
-        }
-    });
-
-    Btnficha7.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img7.src);
-            img7.src = img1Resaltada.src;
-        }
-    });
-
-    Btnficha8.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img8.src);
-            img8.src = img2Resaltada.src;
-        }
-    });
-
-    Btnficha9.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img9.src);
-            img9.src = img3Resaltada.src;
-        }
-    });
-
-    Btnficha10.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img10.src);
-            img10.src = img4Resaltada.src;
-        }
-    });
-
-    Btnficha11.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img11.src);
-            img11.src = img5Resaltada.src;
-        }
-    });
-
-    Btnficha12.addEventListener('click', () => {
-        if(juego.player2.getImg() == null){
-            juego.player2.setFicha(img12.src);
-            img12.src = img6Resaltada.src;
-        }
-
-    });
-    btnReset.addEventListener("click", () => {
-        juego.resetGame();
-    });
     aceptarSeleccion.addEventListener("click", ()=> {
         console.log("aceptar")
-        
+        let selectJuego = document.querySelector('#selectJuego');
+        value = selectJuego.value;
+        juego.setNum(value);
+        console.log(value)
+
+        if (value == 7) {
+            juego.setenLinea(4);
+        }
+        if (value == 8) {
+            juego.setenLinea(5);
+        }if (value == 9){
+            juego.setenLinea(6);
+        }
         juego.init();
         juego.player1.setName(nombreJ1.value);
         juego.player2.setName(nombreJ2.value);
@@ -172,140 +96,80 @@ let juego = new Juego();
         })
         
     })
-/*function addFigure(){
+    Btnficha1.addEventListener('click', () => {
+            juego.player1.setFicha(img1.src);
+            //img1.src = img1Resaltada.src;
+        
+    });
 
-    addCircle( CANT_FICHAS = 20);
+    Btnficha2.addEventListener('click', () => {
+            juego.player1.setFicha(img2.src);
+            //img2.src = img2Resaltada.src;
+        
+    });
 
-    drawFigure();
-    
-}*/
-/*
-function drawFigure(){
-    clearCanvas();
-    draw(row = 8, col = 9);
-    for (let i = 0; i < figures.length; i++) {
-       figures[i].draw();
-    }
-    
-}*/
-/*
-function addCircle(CANT_FICHAS) {
-    let posX = 50;
-    let posYJ1 = 0;
-    let posXJ2 = 900;
-    let posYJ2 = 0;
-    
-    for (let index = 0; index < CANT_FICHAS; index++) {
-        let fichap1 = new Ficha(posX,posYJ1,45, 'img/4enLinea/ficha3.svg',ctx);
-        figures.push(fichap1);
-        posYJ1+=25;
+    Btnficha3.addEventListener('click', () => {
+            juego.player1.setFicha(img3.src);
+            //img3.src = img3Resaltada.src;
+        
+    });
 
-        let fichap2 = new Ficha(posXJ2,posYJ2,45, 'img/4enLinea/ficha5.svg',ctx);
-        figures.push(fichap2);
-        posYJ2 += 25;
-    }
-    
-}*/
-/*
-function clearCanvas(){
-    ctx.fillStyle = '#581578'
-    ctx.fillRect(0,0,canvasWidth,canvasHeight);
-}*/
+    Btnficha4.addEventListener('click', () => {
+            juego.player1.setFicha(img4.src);
+            //img4.src = img4Resaltada.src;
+        
+    });
 
-/*
-function addTablero(col,row){
-    //drawFigure()
-    for (let index = 0; index < row; index++) {
-        let f = [];
-        for (let index = 0; index < col; index++) {
-            let img = new Image();
-            img.src = 'img/4enLinea/celda.svg';
-            f.push(img);
-        }
-        console.log(f);
-        tablero.push(f);
-    }
+    Btnficha5.addEventListener('click', () => {
+            juego.player1.setFicha(img5.src);
+            //img5.src = img5Resaltada.src;
+        
+    });
 
+    Btnficha6.addEventListener('click', () => {
+            juego.player1.setFicha(img6.src);
+            //img6.src = img6Resaltada.src;
+        
+    });
 
-}
+    Btnficha7.addEventListener('click', () => {
+            juego.player2.setFicha(img7.src);
+            //img7.src = img1Resaltada.src;
+        
+    });
 
-function draw() {
-    //clearCanvas();
-    let posX = 250;
-    let posY = 70;
-    for (let i = 0; i < row; i++) {
-        for (let j = 0; j < col; j++) {
-            img = tablero[i][j];
-            ctx.drawImage(img, posX, posY, 55, 55);
-            posX += 55;
-        }
-        posX = 250;
-        posY += 55;
-    }
+    Btnficha8.addEventListener('click', () => {
+            juego.player2.setFicha(img8.src);
+            //img8.src = img2Resaltada.src;
+        
+    });
 
+    Btnficha9.addEventListener('click', () => {
+            juego.player2.setFicha(img9.src);
+            //img9.src = img3Resaltada.src;
+        
+    });
 
+    Btnficha10.addEventListener('click', () => {
+            juego.player2.setFicha(img10.src);
+            //img10.src = img4Resaltada.src;
+        
+    });
+
+    Btnficha11.addEventListener('click', () => {
+            juego.player2.setFicha(img11.src);
+            //img11.src = img5Resaltada.src;
+        
+    });
+
+    Btnficha12.addEventListener('click', () => {
+            juego.player2.setFicha(img12.src);
+            //img12.src = img6Resaltada.src;
+        
+    });
+    btnReset.addEventListener("click", () => {
+        juego.resetGame();
+    });
 
 
-}*/
 
-
-/*
-function addFigures(){
-    addFigure();
-    if(figures.length < CANT_FICHAS){
-        console.log(figures.length + "asd")
-        addFigures();
-        //setTimeout(addFigures, 333);
-    }
-    
-}*/
-
-function findClickedFigure(x,y){
-    for (let i = 0; i < figures.length; i++) {
-        const element = figures[i];
-        figures.slice(1,element);
-        if(element.isPointInside(x,y)){
-            figures.push(element);
-            return element;
-        }
-    }
-}
-
-/*function init() {
-    addTablero(row = 9, col = 8);
-    addFigures();
-    
-    //setInterval(draw, 500);
-    //setTimeout(addFigures, 333);
-}*/
-/*function onMouseDown(e){
-    isMouseDown = true;
-
-    if(lastClickedFigure != null){
-        lastClickedFigure.serResaltado(false);
-        lastClickedFigure = null;
-    }
-
-    let clickFig = findClickedFigure(e.layerX, e.layerY);
-    if(clickFig != null ){
-        clickFig.serResaltado(true);
-        lastClickedFigure = clickFig; 
-    }
-
-    drawFigure();
-}
-
-function onMouseUp(e){
-    isMouseDown = false;
-}
-
-function onMouseMove(e){
-    if(isMouseDown && lastClickedFigure != null){
-        lastClickedFigure.setPosition(e.layerX,e.layerY);
-        drawFigure();
-    }
-}
-
-canvas.addEventListener('mousedown', onMouseDown, false);
-canvas.addEventListener('mouseup', onMouseUp, false);
-canvas.addEventListener('mousemove', onMouseMove, false);*/
