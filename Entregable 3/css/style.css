@@ -526,6 +526,15 @@ h1{
     left: 37.5%;
     top: 71%;
 }
+.imgJuegos img{
+    width: 530px;
+    height: 300px;
+}
+
+.galeria{
+    width: 100vh;
+    height: 300px;
+}
 
 .breadCrums{
     background-color:#581578;

@@ -155,6 +155,9 @@ class Jugador{
         canvas.addEventListener('mousemove', (e) => {
             this.onMouseMove(e)
         });
+        canvas.addEventListener('mouseout', (e) => {
+            this.onMouseUp(e)
+        });
     }
 
     init(amountChips, x, y) {

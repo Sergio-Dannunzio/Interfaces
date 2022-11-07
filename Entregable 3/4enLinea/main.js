@@ -84,6 +84,9 @@ console.log(value)
         juego.setNum(value);
         console.log(value)
 
+        if (value == 6) {
+            juego.setenLinea(3);
+        }
         if (value == 7) {
             juego.setenLinea(4);
         }
