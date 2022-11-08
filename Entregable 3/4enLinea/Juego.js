@@ -13,6 +13,7 @@ class Juego {
         this.enLinea = 4;
     }
 
+    //Dibuja todo el fondo violeta
     clearCanvas(){
         ctx.fillStyle = '#581578';
         ctx.fillRect(0,0,canvasWidth,canvasHeight);
@@ -24,6 +25,7 @@ class Juego {
         this.enLinea = lineas;
     }
 
+    //Llama al dibujado del fondo resetea los players y vacia la matriz del tablero
     resetGame(){
         this.clearCanvas();
         this.player1.resetPlayer();
@@ -33,6 +35,7 @@ class Juego {
         this.stop();
     }
 
+    //Agrega el tablero al canvas y añade cada celda a la matriz que dibuja el tablero
     addTablero(row,col){
         this.clearCanvas();
         for (let index = 0; index < row; index++) {
@@ -46,6 +49,7 @@ class Juego {
         }
     }
     
+    //Dibuja el tablero con cada celda, agrega los nombres de los players y el temporizador
     draw() {
         this.clearCanvas();
 
@@ -87,7 +91,6 @@ class Juego {
         }
         if (this.ganador) {
             if (this.player1.ganador) {
-                console.log("Gano p1")
                 ctx.font = "20px sans-serif";
                 ctx.fillStyle = "white";
                 ctx.fillText("Ganador " + this.player1.getName(), 400, 30);
@@ -102,6 +105,7 @@ class Juego {
         this.player2.drawFicha();
     }
 
+    //Genera la matriz que va a tener fichas
     generarMatriz(row, col) {
         for (let i = 0; i < row; i++) {
             let row = [];
@@ -112,6 +116,7 @@ class Juego {
         }
     }
 
+    //Agrega las fichas a la matriz, con el switch case se fija en que fila se coloca la ficha y le setea la posY y lo mismo para la columna
     agregarAMatriz(ficha, col, player) {
         let fila = this.num - 2;
         let insertado = false;
@@ -124,12 +129,9 @@ class Juego {
                 ficha.setEnMatriz(false);
             }
             if (this.matriz[fila][col] == null) {
-                //console.log("adentro matriz"+this.matriz)
-                console.log("HOLA SOY BUCLE")
                 this.matriz[fila][col] = ficha;
                 insertado = true;
                 console.table(this.matriz)
-                //this.refreshBoard(ficha, fila, col, player);
                 switch (fila) {
                     case 0:
                         ficha.setposY(55);
@@ -191,18 +193,16 @@ class Juego {
                         break;
 
                   }
-                this.ganador = this.checkWinner(ficha, fila, col);
+                this.ganador = this.hayGanador(ficha, fila, col);
                 
                 if (this.ganador){
                     player.setGanador();
                 }
                 else{
                     if (this.player1.turno) {
-                        console.log("turno del 2");
                         this.player1.setTurno(false);
                         this.player2.setTurno(true);
                     } else {
-                        console.log("turno del 1");
                         this.player2.setTurno(false);
                         this.player1.setTurno(true);
                     }
@@ -213,8 +213,8 @@ class Juego {
         }
     }
 
-
-    checkWinner(ficha, fila, col) { 
+    //Se fija si en la matriz hay un ganador segun el this.enLinea que define con cuantas fichas se gana en linea
+    hayGanador(ficha, fila, col) { 
         let count = 0;
         //Columna
         let fila1 = fila;
@@ -294,25 +294,23 @@ class Juego {
     
     }
 
+    //Cuando se deja caer la ficha se fija las fichas de cada jugador y agrega la soltada encima del tablero
     mouseUp(e) {
-        //Fichas Matriz Player 1
         for (let index = 0; index < this.player1.fichas.length; index++) {
             if (this.player1.fichas[index].getCol() != -1 && this.player1.fichas[index].enMatriz == false && this.player1.getTurno()) {
                 this.player1.fichas[index].setEnMatriz(true);
                 this.agregarAMatriz(this.player1.fichas[index].getFicha(), this.player1.fichas[index].getCol(), this.player1);
-                //this.player2.setTurno(true);
             }
         }
-        //Fichas Matriz Player 2
         for (let index = 0; index < this.player2.fichas.length; index++) {
             if (this.player2.fichas[index].getCol() != -1 && this.player2.fichas[index].enMatriz == false && this.player2.getTurno()) {
                 this.player2.fichas[index].setEnMatriz(true);
                 this.agregarAMatriz(this.player2.fichas[index].getFicha(), this.player2.fichas[index].getCol(), this.player2);
-                //this.player1.setTurno(true);
             }
         }
     }
     
+    //Hace un loop para restarle tiempo al timer
     loop() {
         this.interval = 
         setInterval(()=> {
@@ -320,18 +318,21 @@ class Juego {
         },1000);
         //this.resetGame();
     }
+
+    //Se detiene el loop
     stop(){
         clearInterval(this.interval);
     }
 
+    //inicia el mouseup
     initEvents() {
         canvas.addEventListener("mouseup", (e) => {
             this.mouseUp(e)
         });
     }
     
+
     init() {
-        
         this.addTablero(this.num - 1,this.num);
         this.player1.addFichas(80, 70);
         this.player2.addFichas(890, 70);

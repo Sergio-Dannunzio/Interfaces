@@ -48,13 +48,14 @@ class Jugador{
         this.img = imgSrc;
     }
 
+    //Vacia las fichas del player y lo setea en ganador false
     resetPlayer(){
         this.fichas = [];
         this.ganador = false;
     }
 
+    //Crea las fichas
     addFichas(x, posYJ1) {
-
                 for (let index = 0; index < this.CANT_FICHAS; index++) {
                     let ficha = new Ficha(x, posYJ1, 24, this.img, this.name);
                     posYJ1+=30;
@@ -65,6 +66,7 @@ class Jugador{
 
     }
 
+    //Dibuja las fichas del player
     drawFicha() {
         for (let index = this.fichas.length - 1; index >= 0; index--) {
             let ficha = this.fichas[index];
@@ -72,12 +74,12 @@ class Jugador{
         }
     }
 
+    //Cuando el player clickea una ficha le setea selected en true
     onMouseDown(e) {
         let x = e.offsetX;
         let y = e.offsetY;
         for (let i = 0; i < this.fichas.length; i++) {
             if (this.fichas[i].checkSelected(x, y)) {
-                console.log(x)
                 this.fichas[i].setSelected(true);
                 return;
             } else {
@@ -87,6 +89,7 @@ class Jugador{
 
     }
 
+    //Cuando el player mueve la ficha llama a ficha.move()
     onMouseMove(e) {
         let x = e.offsetX;
         let y = e.offsetY;
@@ -103,42 +106,32 @@ class Jugador{
         }
     }
     
+    //Cuando se suelta la ficha se fija que este encima del tablero si es asi la setea en juego sino la retorna a su posicion inicial
     onMouseUp(e){
         let x = e.offsetX;
         let y = e.offsetY;
         this.fichas.forEach(chip => {
-            console.log("Asd")
             if (chip.isSelected()&&!chip.isUsada()) {
-            console.log("soy x" + x)
-            console.log("soy x" + y)
             if (x > 250 && x < 800 && y > 0 && y < 40 && this.getTurno()) {
                 this.columna = false;
-                console.log("en zona");
                 let posCol = 250;
                 let i = 0;
-                console.log("columna"+this.columna)
                 while (!this.columna && i<= this.col) {
                     if (x > posCol && x < posCol + 55 && !chip.enJuego) {
-                            console.log(chip);
-                            console.log("ficha insertada en col " + i);
                             chip.setCol(i);
                             chip.setUso(true);
                             chip.setEnJuego(true);
                             this.columna = true;
-                            console.log("while"+this.columna)
                         } else {
-                            console.log("soy el else");
                             posCol += 55;
                             i++;
                         }
-                        console.log("finalWhile"+this.columna)
                     }
                 } else {
                    chip.returnToPos();
                 }
             }
                 chip.setSelected(false);
-                this.isMouseDown = false;
             });
         
 
@@ -160,7 +153,7 @@ class Jugador{
         });
     }
 
-    init(amountChips, x, y) {
+    init() {
         this.initEvents();
     }
 }

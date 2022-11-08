@@ -66,23 +66,18 @@ let aceptarSeleccion = document.querySelector('#aceptarSeleccion');
 let btnReset = document.querySelector("#btnReset");
 
 
-let figures = [];
-let lastClickedFigure = null;
-let isMouseDown = false;
 var tablero = [];
-var chips = [];
 let value = 0;
 
 let juego = new Juego(0);
-console.log(value)
 
-    console.log("soy desde main")
+    //Cuando se acepta la seleccion del jugador se inicia el juego
     aceptarSeleccion.addEventListener("click", ()=> {
-        console.log("aceptar")
+
         let selectJuego = document.querySelector('#selectJuego');
         value = selectJuego.value;
         juego.setNum(value);
-        console.log(value)
+
 
         if (value == 6) {
             juego.setenLinea(3);
@@ -134,7 +129,6 @@ img12Save = img12.src;
                 img5.src = img5Save;
                 img6.src = img6Save;
         }
-        //img7.src = img7Save;
        
     });
 

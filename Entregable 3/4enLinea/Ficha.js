@@ -18,7 +18,7 @@ class Ficha{
         this.img.src = img;
     }
 
-
+    //Dibuja cada ficha
     draw(){
         ctx.drawImage(this.img, this.posX , this.posY , 45, 45);
     }
@@ -85,10 +85,8 @@ class Ficha{
         this.resaltado = resaltado;
     }
 
+    //Se fija si la ficha esta seleccionada
     checkSelected(x, y) {
-        console.log(this.posX)
-        console.log(this.posY)
-        console.log("soy x   " + x)
         return x > (this.posX  - this.radius*2) && x < (this.posX  + this.radius*2) && (y > this.posY  - this.radius*2) && y < (this.posY  + this.radius*2);
     }
 
@@ -108,19 +106,12 @@ class Ficha{
         this.enJuego = pasada;
     }
 
-    move(x, y, e) {
+    //Mueve la ficha
+    move(x, y) {
         if (x > this.radius && x < (1150 - this.radius) && y > this.radius && y < (580 - this.radius)) {
             this.posX = x - this.radius;
             this.posY = y - this.radius;
         }
     }
-
-    isPointInside(x,y){
-        var rect = canvas.getBoundingClientRect();
-        let _x = this.posX - x + rect.left + this.radius;
-        let _y = this.posY - y + rect.top + this.radius;
-        return Math.sqrt(_x * _x  + _y * _y) < this.radius;
-    }
-
 
 }
