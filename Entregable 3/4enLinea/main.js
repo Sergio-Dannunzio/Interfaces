@@ -91,8 +91,16 @@ let juego = new Juego(0);
             juego.setenLinea(6);
         }
         juego.init();
-        juego.player1.setName(nombreJ1.value);
-        juego.player2.setName(nombreJ2.value);
+        if( nombreJ1.value == ""){
+            juego.player1.setName("Jugador 1");
+        }else{
+            juego.player1.setName(nombreJ1.value);
+        }
+        if( nombreJ2.value == ""){
+            juego.player2.setName("Jugador 2");
+        }else{
+            juego.player2.setName(nombreJ2.value);
+        }
         juego.tiempo = 60;
         juego.loop();
         setInterval(()=> {
@@ -101,22 +109,22 @@ let juego = new Juego(0);
         
     })
 
-//Seteo de fichas de jugador1
-
-img1Save = img1.src;
-img2Save = img2.src;
-img3Save = img3.src;
-img4Save = img4.src;
-img5Save = img5.src;
-img6Save = img6.src;
     
-img7Save = img7.src;
-img8Save = img8.src;
-img9Save = img9.src;
-img10Save = img10.src;
-img11Save = img11.src;
-img12Save = img12.src;
-
+    img1Save = img1.src;
+    img2Save = img2.src;
+    img3Save = img3.src;
+    img4Save = img4.src;
+    img5Save = img5.src;
+    img6Save = img6.src;
+    
+    img7Save = img7.src;
+    img8Save = img8.src;
+    img9Save = img9.src;
+    img10Save = img10.src;
+    img11Save = img11.src;
+    img12Save = img12.src;
+    
+    //Seteo de fichas de jugador1
     Btnficha1.addEventListener('click', () => {
         if(juego.player2.getImg() != img1Save){
                 juego.player1.setFicha(img1.src);
@@ -291,6 +299,8 @@ img12Save = img12.src;
         }
         
     });
+
+    //Resetear juego
     btnReset.addEventListener("click", () => {
         juego.resetGame();
     });

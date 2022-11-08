@@ -13,16 +13,17 @@ class Juego {
         this.enLinea = 4;
     }
 
-    //Dibuja todo el fondo violeta
-    clearCanvas(){
-        ctx.fillStyle = '#581578';
-        ctx.fillRect(0,0,canvasWidth,canvasHeight);
-    }
     setNum(num){
         this.num = num;
     }
     setenLinea(lineas){
         this.enLinea = lineas;
+    }
+
+    //Dibuja todo el fondo violeta
+    clearCanvas(){
+        ctx.fillStyle = '#581578';
+        ctx.fillRect(0,0,canvasWidth,canvasHeight);
     }
 
     //Llama al dibujado del fondo resetea los players y vacia la matriz del tablero
@@ -68,10 +69,10 @@ class Juego {
             posY += 50;
         }
 
-        ctx.font = "50px  sans-serif";
+        ctx.font = "30px  sans-serif";
         ctx.fillStyle = "white";
         ctx.fillText(this.player1.getName(), 50, 50);
-        ctx.fillText(this.player2.getName(), 860, 50);
+        ctx.fillText(this.player2.getName(), 800, 50);
         if (this.ganador) {
             ctx.font = "20px sans-serif";
             ctx.fillStyle = "#581578";
@@ -216,7 +217,6 @@ class Juego {
     //Se fija si en la matriz hay un ganador segun el this.enLinea que define con cuantas fichas se gana en linea
     hayGanador(ficha, fila, col) { 
         let count = 0;
-        //Columna
         let fila1 = fila;
         while (fila1 <= this.num - 2) {
             if (this.matriz[fila1][col].img.src == ficha.img.src) {
@@ -230,7 +230,6 @@ class Juego {
             }
             fila1++;
         }
-        //Fila
         count = 0;
         let col1 = col;
         while (col1 >= 0 && this.matriz[fila][col1 - 1] != null && this.matriz[fila][col1 - 1].img.src == ficha.img.src) {
@@ -247,8 +246,6 @@ class Juego {
             }
             col1++;
         }
-
-        //Diagonal
         count = 0;
         let col3 = col;
         let fila3 = fila;
@@ -256,7 +253,6 @@ class Juego {
             col3--;
             fila3++;
         }
-        
         while (col3 <= this.num - 1 && fila3 >= 0 && this.matriz[fila3][col3] != null) {
             if (this.matriz[fila3][col3].img.src == ficha.img.src) {
                 count++;
@@ -270,8 +266,6 @@ class Juego {
             col3++;
             fila3--;
         }
-
-        //Diagonal
         count = 0;
         let col2 = col;
         let fila2 = fila;
@@ -279,7 +273,6 @@ class Juego {
             col2--;
             fila2--;
         }
-        
         while (col2 <= this.num - 1 && fila2 <= this.num -2 && this.matriz[fila2][col2] != null) {
             if (this.matriz[fila2][col2].img.src == ficha.img.src) {
                 count++;
@@ -316,22 +309,13 @@ class Juego {
         setInterval(()=> {
             this.tiempo--;
         },1000);
-        //this.resetGame();
     }
 
     //Se detiene el loop
     stop(){
         clearInterval(this.interval);
     }
-
-    //inicia el mouseup
-    initEvents() {
-        canvas.addEventListener("mouseup", (e) => {
-            this.mouseUp(e)
-        });
-    }
     
-
     init() {
         this.addTablero(this.num - 1,this.num);
         this.player1.addFichas(80, 70);
@@ -342,7 +326,9 @@ class Juego {
         this.player1.setTurno(true);
         this.player2.init();
         this.generarMatriz(this.num - 1,this.num);
-        this.initEvents();
+        canvas.addEventListener("mouseup", (e) => {
+            this.mouseUp(e)
+        });
     }
     
 }

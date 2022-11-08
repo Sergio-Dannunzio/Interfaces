@@ -110,36 +110,35 @@ class Jugador{
     onMouseUp(e){
         let x = e.offsetX;
         let y = e.offsetY;
-        this.fichas.forEach(chip => {
-            if (chip.isSelected()&&!chip.isUsada()) {
+        this.fichas.forEach(ficha => {
+            if (ficha.isSelected()&&!ficha.isUsada()) {
             if (x > 250 && x < 800 && y > 0 && y < 40 && this.getTurno()) {
                 this.columna = false;
                 let posCol = 250;
                 let i = 0;
                 while (!this.columna && i<= this.col) {
-                    if (x > posCol && x < posCol + 55 && !chip.enJuego) {
-                            chip.setCol(i);
-                            chip.setUso(true);
-                            chip.setEnJuego(true);
-                            this.columna = true;
+                    if (x > posCol && x < posCol + 55 && !ficha.enJuego) {
+                        ficha.setCol(i);
+                        ficha.setUso(true);
+                        ficha.setEnJuego(true);
+                        this.columna = true;
                         } else {
                             posCol += 55;
                             i++;
                         }
                     }
                 } else {
-                   chip.returnToPos();
+                   ficha.returnToPos();
                 }
             }
-                chip.setSelected(false);
+                ficha.setSelected(false);
             });
         
 
     }
 
-
-    initEvents() {
-       canvas.addEventListener('mousedown', (e) => {
+    initEvents(){
+        canvas.addEventListener('mousedown', (e) => {
             this.onMouseDown(e)
         });
         canvas.addEventListener('mouseup', (e) => {
