@@ -821,8 +821,37 @@ h1{
 }
 
 
+#hamburguesa{
+    min-width: 40px;
+    margin-top: 12px;
+    height: 32px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
 
+#hamburguesa span{
+    background-color: #F4F4F5;
+    width: 100%;
+    height: 4px;
+    transition: all 300ms ease-out;
+}
 
+#hamburguesa.active .linea1{
+    opacity: 0;
+    width: 0;
+}
+
+#hamburguesa.active .linea2{
+    transform: translateY(2.5px) rotate(45deg);
+}
+
+#hamburguesa.active .linea3{
+    transform: translateY(-7.5px) rotate(-45deg);
+}
 
 
 .btn_trailer{
