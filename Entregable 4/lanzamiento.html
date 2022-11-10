@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Juegos arcade</title>
+    <script src="logicaLanzamiento.js"></script>
+</head>
+
+<body class="bodyLanzamiento">
+
+
+     <header>
+        <div class="container">
+            <div class="img">
+                <button id="botonCategorias">
+                    <img class="menu" src="img/menu.png" alt="">
+                </button>
+                
+                <a href="Home.html"><img class="logo" src="img/logo.svg" alt=""></a>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar juegos" name="" id="">
+                <img class="buscadorImg" src="img/buscador.png" alt="">
+            </div>
+            <div class="menuUsuario">
+                <div id="btnUsuario" class="usuario">
+                    <img class="logoUsuario" src="img/Component 22.svg" alt="">
+                </div>
+                <div id="flecha">
+                    <img class="flecha" src="img/ordenar-abajo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainLanzamiento">
+        <div id="categorias" class="noMostrar">
+            <div class="categorias">
+                
+                <ul class="listaCategorias">
+                    <li>Acción</li>
+                    <li>Aventura</li>
+                    <li>Carreras</li>
+                    <li>Clásicos</li>
+                    <li>Deportes</li>
+                    <li>Escape</li>
+                    <li>Estrategia</li>
+                    <li>Educativos</li>
+                    <li>Puzzle</li>
+                    <li>Pool</li>
+                    <li>Multijugador</li>
+                    <hr>
+                    <li class="liToggle">
+                        <div class="containerRedesToggle">
+                            <div class="logoRedes">
+                                <img class="redes" src="img/logoFB.svg" alt="">
+                            </div>
+                            <div class="logoRedes">
+                                <img class="redes" src="img/logoTW.svg" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="usuarioCategorias" class="noMostrar">
+            <ul class="listaUsuarioCategorias">
+                <div>
+                    <img class="logoUsuario2" src="img/Component 29.svg" alt="">
+                    <p>Nombre</p>
+                </div>
+                <hr>
+                <li>Notificaciones</li>
+                <li>Tienda</li>
+                <li>Soporte</li>
+                <li>Configuración</li>
+                <li>Cerrar sesión</li>
+            </ul>
+        </div>
+        <div class="heroFondo">
+            <img class="fondo"  src="./img/fondoFuego.svg" alt="">
+        </div>
+        <div class="contenedorLogoLanzamiento">
+            <img class="logoMortalLanzamiento" src="img/logoMortal.svg" alt="">
+        </div>
+        <div class="fuego">
+            <img class="fuegoimg" src="img/fuego.svg" alt="">
+        </div>
+        <div class="personaje">
+            <img class="personajeimg" src="img/personaje.svg" alt="">
+        </div>
+        <button class="btn_trailer"><p>Ver trailer</p>
+            <img src="./img/boton-de-play.png" alt="">
+        </button>
+
+       
+        <div class="containerMain">
+            <h1>Un poco de historia</h1>
+        </div>
+            <div class="contenedorHistoria">
+                <div class="historia">
+                    
+                        <p>En una misteriosa isla, internada en los mares de China, y desconocida por el resto del mundo, los luchadores sobrenaturales luchan por el destino de la Tierra. Ese gran torneo es conocido como Mortal Kombat y ha sido por años una competición de honor y gloria. Luchadores de todo el mundo eran invitados a combatir. Aproximadamente 2 años atrás, un hechicero llamado Shang Tsung ingresó al torneo e inmediatamente lo ganó, convirtiéndose en Campeón Supremo.</p>
+                        &nbsp;
+                        <p>Una vez por generación, cuando los mejores y más valientes luchadores podían reunirse; Shang Tsung entró a los torneos en diferentes formas y ganó todas las veces, de este modo, él parecía invencible. Shang Tsung podía transformarse en cualquier persona, también podía ver los temores en el corazón de sus oponentes y de esta manera se enfrentaba a sus adversarios ganando siempre los combates, tomando su fuerza y manteniendo así su juventud inmortal para luego llevarse las almas de los oponentes caídos para saciar la ira del Emperador.</p>
+                        &nbsp;
+                        <p>Sin embargo, a Shang Tsung no le bastaba con ganar una vez el torneo, debía ganarlo diez veces consecutivas para abrir el Portal dimensional que supuestamente uniría la Tierra con el Outworld. Hace 500 años, cuando casi había acumulado suficientes almas para Shao Kahn fue derrotado por el gran Kung Lao, un sacerdote de la orden de la luz.</p>
+                        &nbsp;
+                        <p>Tiempo después, Shang Tsung volvió al torneo con Goro, un luchador mitad hombre, mitad dragón con cuatro brazos y dos metros de altura conocido como El Príncipe del Dolor. Goro venció al monje Shaolin conocido como Kung Lao y durante 500 años permaneció invicto como Campeón Supremo. Después, Shang Tsung tomó nuevamente el control del torneo ganándolo 9 veces consecutivas. Así, una vez más el Torneo Shaolin conocido como Mortal Kombat será sostenido por los más grandes luchadores de la Tierra que se enfrentarán contra los adversarios del Outworld, uno de los 50 luchadores que serán elegidos será el propio jugador.</p>
+                    
+                </div>
+            </div>
+
+        <div class="containerMain">
+            <h1>Algunos personajes destacados</h1>
+        </div>
+
+        <ul  class="carrousel">
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/rain.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/jade.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/cassie.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/rambo.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/scorpion.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/guason.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/dvorah.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/cetrion.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/jhonny.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2  ">
+                    <img class="fondoPj card_image" src="./img/personajes/terminator.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/shao.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/kung.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/baraka.svg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="containerImgFondoPJ  card2">
+                    <img class="fondoPj card_image" src="./img/personajes/kitana.svg" alt="">
+                </div>
+            </li>
+        </ul>
+        
+        <div class="cardFeatureEND">
+            <div id="spritesheetMortal">
+            </div>
+            <div class="cardFeature">
+                <div>
+                    <h1>DOS HISTORIAS CINEMATOGRÁFICAS</h1>
+                    <p>Toma control de los protectores de Earthrealm en las DOS aclamadas Historias de Campaña mientras compiten para detener a Kronika de regresar el tiempo y restablecer la historia. Las amistades serán puestas a prueba, y nuevas alianzas forjadas, en la batalla para salvar toda la existencia.</p>
+                </div>
+                <div >
+                    <img class="imgFeature" src="./img/features/feature.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+         <div class="cardFeatureSTART">
+            <div class="cardFeature2">
+                <div class="contenedorimgFeature">
+                    <img class="imgFeature2" src="./img/features/feature2.svg" alt="">
+                </div>
+                <div>
+                    <h1 class="tituloSegundaFeature">TODOS LOS 37 PERSONAJES</h1>
+                    <p class="textoSegundaFeature">Incluye todos los 13 personajes agregados incluyendo Shao Kahn, Shang Tsung, Nightwolf, Terminator, Sindel, El Guasón, Spawn, Fujin, Sheeva, RoboCop y los recién agregados Mileena, Rain y Rambo.</p>
+                </div>
+            </div>
+
+            <div id="spritesheetMortal2">
+            </div>
+        </div>
+
+        <div class="cardFeatureEND2">
+            <div id="spritesheetMortal3">
+            </div>
+            <div class="cardFeature2">
+                <div class="contenedorimgFeature">
+                    <img class="imgFeature3" src="./img/features/feature3.svg" alt="">
+                </div>
+                <div class="contenedorTextoFeature">
+                    <h1 class="tituloTercerFeature">TODAS LAS CARACTERÍSTICAS Y MODOS</h1>
+                    <p >Todos los escenarios, Stage Fatalities, Brutalities, Iconic Fatalities y Friendships.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footerLanzamiento">
+        <div class="containerFooter">
+            
+            <div class="seccion">
+                    <h1 class="siguenos"> Siguenos!</h1>
+                <div class="containerRedes">
+                    
+                    <div class="logoRedes">
+                        <img class="redes" src="img/logoFB.svg" alt="">
+                    </div>
+                    <div class="logoRedes">
+                        <img class="redes" src="img/logoTW.svg" alt="">
+                    </div>
+                </div>
+                <div class="ubicacion">
+                    <p>Av. del Valle 445</p>
+                    <p>Tandil, Buenos Aires.</p>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccion">
+                <h1> Ayuda</h1>
+                <p>Preguntas frecuentes</p>
+                <p>Términos y condiciones</p>
+                <p>Soporte</p>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccion">
+                <h1>Categorías</h1>
+                <div class="divCategoria">
+                    <div class="listadoCategorias"> 
+                        <p>Acción </p>
+                        <p>Aventura</p>
+                        <p>Carreras</p>
+                        <p>Clásicos</p>
+                        <p>Deportes</p>
+                        <p>Escape</p>
+                    </div>
+                    <div>
+                        <p>Estrategia</p>
+                        <p>Educativos</p>
+                        <p>Puzzle</p>
+                        <p>Pool</p>
+                        <p>Multijugador</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="seccionUltimo">
+                <h1> Acerca del sitio</h1>
+                <p>Accesibilidad</p>
+                <p>Política de copyright</p>
+                <p>Política de privacidad</p>
+                <p>Contacto</p>
+            </div>
+        </div>
+        <p class="copyright">Copyright Juegos Arcade © 2022 All right reserved</p>
+    </footer>
+
+    </main>
+
+
+</body>
+

@@ -785,6 +785,12 @@ h1{
 
 /*************LANZAMIENTO******************/
 
+#spritesheetMortal{
+    width: 76px;
+    height: 109px;
+    background: url("./img/spritesheet.png");
+}
+
 
 .btn_trailer{
     font-size: 16px;

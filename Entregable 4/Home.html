@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Juegos arcade</title>
+    <script src="logica.js"></script>
+</head>
+<body>
+            
+    <header>
+        <div class="container">
+            <div class="img">
+                <button id="botonCategorias">
+                    <img class="menu" src="img/menu.png" alt="">
+                </button>
+                
+                <img class="logo" src="img/logo.svg" alt="">
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar juegos" name="" id="">
+                <img class="buscadorImg" src="img/buscador.png" alt="">
+            </div>
+            <div class="menuUsuario">
+                <div id="btnUsuario" class="usuario">
+                    <img class="logoUsuario" src="img/Component 22.svg" alt="">
+                </div>
+                <div id="flecha">
+                    <img class="flecha" src="img/ordenar-abajo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contenedorSpinner">
+        <div class="loader noMostrar" id="spinner"></div>
+        <div class="loaderPorcentaje">
+            <span class="noMostrar" id="spinner%">0%</span>
+        </div>
+    </div>
+    <div id="categorias" class="noMostrar">
+        <div class="categorias">
+            
+            <ul class="listaCategorias">
+                <li>Acción</li>
+                <li>Aventura</li>
+                <li>Carreras</li>
+                <li>Clásicos</li>
+                <li>Deportes</li>
+                <li>Escape</li>
+                <li>Estrategia</li>
+                <li>Educativos</li>
+                <li>Puzzle</li>
+                <li>Pool</li>
+                <li>Multijugador</li>
+                <hr>
+                <li class="liToggle">
+                    <div class="containerRedesToggle">
+                        <div class="logoRedes">
+                            <img class="redes2" src="img/logoFB.svg" alt="">
+                        </div>
+                        <div class="logoRedes">
+                            <img class="redes2" src="img/logoTW.svg" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="usuarioCategorias" class="noMostrar">
+        <ul class="listaUsuarioCategorias">
+            <div>
+                <img class="logoUsuario2" src="img/Component 29.svg" alt="">
+                <p>Nombre</p>
+            </div>
+            <hr>
+            <li>Notificaciones</li>
+            <li>Tienda</li>
+            <li>Soporte</li>
+            <li>Configuración</li>
+            <li>Cerrar sesión</li>
+        </ul>
+    </div>
+     
+    <main id="main">
+            <div class="containerMain">
+                <h1>Próximos estrenos</h1>
+            </div>
+            <div class="containerMortal">
+                <img class="imgMortal" src="img/mortalMasLogo.svg" alt="">
+                <a href="lanzamiento.html"> <button class="btnInfo info"><p>Más información</p></button></a>
+            </div>
+            <div class="containerMain">
+                <div >
+                    <img src="/img/imgJuego.svg" alt="">
+                </div>
+                <h1 class="destacados">Destacados</h1>
+                <div class="carrouselDiv">
+                    
+                    <ul class="carrousel">
+                        <li>
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselWidth" src="./img/juego.svg" alt="">
+                                </div>
+                                <div class="cardWithName">
+                                    <h1>4 en línea</h1>
+                                    <a href="juego.html"><button class="btn jugar btnJugar"><p>Jugar</p></button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselWidth" src="img/carrousel/1/bombit.png" alt="">
+                                </div>
+                                <div class="card">
+                                    <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselHeigh" src="img/carrousel/1/fallguys.png" alt="">
+                                </div>
+                                <div class="cardPrice">
+                                    <p class="precio">$12.00</p>
+                                    <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselHeigh" src="img/carrousel/1/amongus.png" alt="">
+                                    
+                                </div>
+                                <div class="cardPrice">
+                                    <p class="precio">$3.00</p>
+                                    <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselWidth" src="img/carrousel/1/plantasVSzombies.png" alt="">
+                                    
+                                </div>
+                                <div class="card">
+                                    <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="containerCard">
+                                <div class="containerImg">
+                                    <img class="imgCarrouselWidth" src="img/carrousel/1/fuegoyagua.png" alt="">
+                                    
+                                </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/1/pacman.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/1/fornite.png" alt="">
+                                
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$7.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <h1>Juegos que te pueden interesar</h1>
+            <ul class="carrousel">
+                <li>
+                    <div class="containerCard">
+                        <div class="containerImg">
+                            <img class="imgCarrouselWidth" src="img/carrousel/2/bingo.png" alt="">
+                        </div>
+                        <div class="card">
+                            <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerCard">
+                        <div class="containerImg">
+                            <img class="imgCarrouselHeigh" src="img/carrousel/2/geometry.png" alt="">
+                            
+                        </div>
+                        <div class="cardPrice">
+                            <p class="precio">$8.00</p>
+                            <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/ungo.png" alt="">
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$3.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/pool.png" alt="">
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/subway.png" alt="">
+                                
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$7.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/tetris.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/2/callofduty.png" alt="">
+                                
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$11.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/redball.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h1>Juegos clásicos</h1>
+                <ul class="carrousel">
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/1/plantasVSzombies.png" alt="">
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/1/pacman.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/2/tetris.png" alt="">
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/3/bubblle.png" alt="">
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$2.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/3/bingo2.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/3/candycrush.png" alt="">
+
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$12.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselWidth" src="img/carrousel/3/ludo.png" alt="">
+                                
+                            </div>
+                            <div class="cardPrice">
+                                <p class="precio">$8.00</p>
+                                <button class="btn comprar btnComprar"><p>Comprar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerCard">
+                            <div class="containerImg">
+                                <img class="imgCarrouselHeigh" src="img/carrousel/3/pinball.png" alt="">
+                                
+                            </div>
+                            <div class="card">
+                                <button class="btn jugar btnJugar"><p>Jugar</p></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+                
+            </div>
+        
+            <footer>
+                <div class="containerFooter">
+                    
+                    <div class="seccion">
+                            <h1 class="siguenos"> Siguenos!</h1>
+                        <div class="containerRedes">
+                            
+                            <div class="logoRedes">
+                                <img class="redes" src="img/logoFB.svg" alt="">
+                            </div>
+                            <div class="logoRedes">
+                                <img class="redes" src="img/logoTW.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="ubicacion">
+                            <p>Av. del Valle 445</p>
+                            <p class="tandil">Tandil, Buenos Aires.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div class="seccion">
+                        <h1> Ayuda</h1>
+                        <p>Preguntas frecuentes</p>
+                        <p>Términos y condiciones</p>
+                        <p>Soporte</p>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div class="seccion">
+                        <h1>Categorías</h1>
+                        <div class="divCategoria">
+                            <div class="listadoCategorias"> 
+                                <p>Acción </p>
+                                <p>Aventura</p>
+                                <p>Carreras</p>
+                                <p>Clásicos</p>
+                                <p>Deportes</p>
+                                <p>Escape</p>
+                            </div>
+                            <div>
+                                <p>Estrategia</p>
+                                <p>Educativos</p>
+                                <p>Puzzle</p>
+                                <p>Pool</p>
+                                <p>Multijugador</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <div class="seccionUltimo">
+                        <h1> Acerca del sitio</h1>
+                        <p>Accesibilidad</p>
+                        <p>Política de copyright</p>
+                        <p>Política de privacidad</p>
+                        <p>Contacto</p>
+                    </div>
+                </div>
+                <p class="copyright">Copyright Juegos Arcade © 2022 All right reserved</p>
+            </footer>
+
+    </main>
+
+</body>
+</html>
