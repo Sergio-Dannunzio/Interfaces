@@ -1,11 +1,29 @@
 let hamburguesa = document.querySelector("#hamburguesa");
     function cruzHamburguesa(){
-        hamburguesa.classList.toggle("active");
         let categorias = document.getElementById("categorias");
-        if (categorias.className!="noMostrar") {
-        categorias.className = "noMostrar";
+        let li = document.querySelectorAll("#li1");
+
+        hamburguesa.classList.toggle("active");
+        if (categorias.className == "oculto") {
+            categorias.className = "visible";
+            li.forEach(function(el,index){
+                setTimeout(function() {
+                    el.className = "entradaDesdeIzq";
+                    let elem = li.length-1;
+                    if(elem == index){
+                        li[elem].className = "liToggle entradaDesdeIzq";
+                    }
+
+                }, index * 200);
+            });
+              
         }else{
-            categorias.className = "";
+            li.forEach(function(item){
+                item.className = "oculto";
+                li[11].className = "oculto";
+            });
+            categorias.className = "oculto";
+            
         }
     }
 

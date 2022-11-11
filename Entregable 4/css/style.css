@@ -1145,6 +1145,48 @@ h1{
 .noMostrar{
     display: none;
 }
+
+.oculto{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+ }
+ .visible{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.entradaDesdeIzq {
+    animation: entradaDesdeIzq .8s ease ;
+  }
+
+  @keyframes entradaDesdeIzq {
+    from {
+      transform: translateX(-200%);
+    }
+  
+    to {
+        transform: translateX(0);
+    }
+  }
+
+
+  .entradaDesdeDer{
+    animation: entradaDesdeDer .8s ease ;
+  }
+
+  @keyframes entradaDesdeDer {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+        transform: translateX(-200%);
+    }
+  }
+
 .listaCategorias{
     display: flex;
     flex-direction: column;

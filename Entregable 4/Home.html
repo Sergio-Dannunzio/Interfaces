@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>Juegos arcade</title>
+
     <script src="logica.js"></script>
 </head>
 <body>
@@ -18,10 +19,14 @@
     <header>
         <div class="container">
             <div class="img">
-                <button id="botonCategorias">
-                    <img class="menu" src="img/menu.png" alt="">
-                </button>
-                
+                <div id="hamburguesa" class="">
+                    <span class="linea1"></span>
+                    <span class="linea2"></span>
+                    <span class="linea3"></span>
+                </div>
+                    <!--<button id="botonCategorias">
+                        <img class="menu" src="img/menu.png" alt="">
+                    </button>-->
                 <img class="logo" src="img/logo.svg" alt="">
             </div>
             <div class="buscador">
@@ -44,23 +49,23 @@
             <span class="noMostrar" id="spinner%">0%</span>
         </div>
     </div>
-    <div id="categorias" class="noMostrar">
+    <div id="categorias" class="oculto">
         <div class="categorias">
             
             <ul class="listaCategorias">
-                <li>Acción</li>
-                <li>Aventura</li>
-                <li>Carreras</li>
-                <li>Clásicos</li>
-                <li>Deportes</li>
-                <li>Escape</li>
-                <li>Estrategia</li>
-                <li>Educativos</li>
-                <li>Puzzle</li>
-                <li>Pool</li>
-                <li>Multijugador</li>
+                <li id="li1" class="oculto">Acción</li>
+                <li id="li1" class="oculto">Aventura</li>
+                <li id="li1" class="oculto">Carreras</li>
+                <li id="li1" class="oculto">Clásicos</li>
+                <li id="li1" class="oculto">Deportes</li>
+                <li id="li1" class="oculto">Escape</li>
+                <li id="li1" class="oculto">Estrategia</li>
+                <li id="li1" class="oculto">Educativos</li>
+                <li id="li1" class="oculto">Puzzle</li>
+                <li id="li1" class="oculto">Pool</li>
+                <li id="li1" class="oculto">Multijugador</li>
                 <hr>
-                <li class="liToggle">
+                <li id="li1" class="liToggle oculto">
                     <div class="containerRedesToggle">
                         <div class="logoRedes">
                             <img class="redes2" src="img/logoFB.svg" alt="">
@@ -450,6 +455,7 @@
                 <p class="copyright">Copyright Juegos Arcade © 2022 All right reserved</p>
             </footer>
 
+            <script src="animaciones.js"></script>
     </main>
 
 </body>
