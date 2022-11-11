@@ -854,6 +854,79 @@ h1{
 }
 
 
+@keyframes scroll {
+    0% {background-position-x: 0px;}
+    100% {background-position-x: -6091px;}
+}
+
+.contenedorParallax{
+    max-width: 100%;
+    min-height: 621px;
+    overflow: hidden;
+}
+
+.layer {
+    min-height: 500px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+.heroFondo{      
+    background-image: url("../img/3.jpg");   
+    animation: scroll 150s infinite linear;
+  }
+
+.estrellas{
+    background-image: url("../img/01.png");   
+    animation: scroll 20s infinite linear; 
+}
+.estrellas{
+
+    min-height: 621px;
+    overflow: hidden;
+
+}
+
+@keyframes move {
+    0% {background-position-x: 0px;}
+    100% {background-position-x: -10px;}
+}
+
+.fuego{
+    position: absolute;
+    top: 433px;
+    left: 0px;
+    width: 100%;
+    height: 40%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-image: url("../img/fuego.png");
+    animation: move 3s linear 1s infinite alternate;
+}
+
+@keyframes moveVertical {
+    0% {background-position-y: 0px;}
+    100% {background-position-y: -10px;}
+}
+
+.personaje{
+    position: absolute;
+    top: 289px;
+    left: 348px;
+    width: 70%;
+    height: 60%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-image: url("../img/personaje.png");
+    animation: moveVertical 1.5s linear 1s infinite alternate;
+}
+
+
 .btn_trailer{
     font-size: 16px;
     font-weight: bold;
@@ -910,8 +983,8 @@ h1{
     height: 2410px;
 }
 .heroFondo{
-    width: 100%;
-    height: 621px;
+    max-width: 100%;
+    min-height: 621px;
     overflow: hidden;
 }
 
@@ -928,9 +1001,9 @@ h1{
     left: 438px;
 }
 
-.fuego{
+/*.fuego{
     width: 940px;
-}
+}*/
 
 .fuegoimg{
     /*width: 940px;*/
@@ -938,10 +1011,10 @@ h1{
     top: 441px;
     left: 300px;
 }
-
+/*
 .personaje{
     width: 1036px;
-}
+}*/
 
 .personajeimg{
     position: absolute;
