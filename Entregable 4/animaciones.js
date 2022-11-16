@@ -3,7 +3,9 @@ let hamburguesa = document.querySelector("#hamburguesa");
         let categorias = document.getElementById("categorias");
         let li = document.querySelectorAll("#li1");
 
+        
         hamburguesa.classList.toggle("active");
+
         if (categorias.className == "oculto") {
             categorias.className = "visible";
             li.forEach(function(el,index){
@@ -14,7 +16,7 @@ let hamburguesa = document.querySelector("#hamburguesa");
                         li[elem].className = "liToggle entradaDesdeIzq";
                     }
 
-                }, index * 200);
+                }, index * 100);
             });
               
         }else{
@@ -25,6 +27,7 @@ let hamburguesa = document.querySelector("#hamburguesa");
             categorias.className = "oculto";
             
         }
+
     }
 
 hamburguesa.addEventListener("click", cruzHamburguesa);
