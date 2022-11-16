@@ -85,3 +85,41 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+  /*
+  3. Al hacer scroll el Header debe ser sticky y achicarse, 
+  de tal manera que además el logo debe achicarse. 
+  En caso de ser necesario cambiar el fondo a un 
+  color plano (recomendado)
+  */
+
+let headerEj3 = document.getElementById("header");
+let headerDiv = document.querySelector(".container");
+let inputBuscador = document.getElementById("input");
+let logoUsuario = document.querySelector(".logoUsuario");
+let menuUsuario = document.querySelector(".menuUsuario");
+let flecha = document.querySelector(".flecha");
+let hamburguesaScroll = document.querySelector("#hamburguesa");
+let linea1 = document.querySelector(".linea1");
+let linea2 = document.querySelector(".linea2");
+let linea3 = document.querySelector(".linea3");
+
+function headerScroll(){
+
+  headerEj3.style.height = "30px";
+  inputBuscador.style.height = "16px";
+  logoUsuario.style.width = "28px";
+  logoUsuario.style.height = "28px";
+  logoUsuario.style.padding = "2px";
+  
+  menuUsuario.className = "menuUsuarioScroll";
+  flecha.className = "flechaScroll";
+  hamburguesaScroll.style.margin = "0px";
+  hamburguesaScroll.style.height = "24px";
+  linea1.style.width = "50%";
+  linea2.style.width = "50%";
+  linea3.style.width = "50%";
+  linea3.className = "#hamburguesa.active linea3Scroll";
+}
+
+window.addEventListener("scroll", headerScroll);

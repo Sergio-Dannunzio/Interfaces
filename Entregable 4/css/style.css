@@ -44,11 +44,22 @@ header{
     z-index: 5;
 }
 
+
+
+
 .container{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
+    width: 100%;
+}
+
+.containerScroll{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50%;
     width: 100%;
 }
 
@@ -59,6 +70,7 @@ header{
     width:  100%;
     height: 100%;
 }
+
 button{
     border: none;
     background: transparent;
@@ -140,6 +152,12 @@ header a .logo{
     max-height: 22px;
     padding: 8px 12px;
     padding-left: 4px;
+}
+
+.flechaScroll{
+    max-width: 22px;
+    max-height: 22px;
+    padding-top: 8px;
 }
 
 /*************MAIN***********************/
@@ -872,7 +890,7 @@ h1{
 }
 
 #hamburguesa span{
-    background-color: #F4F4F5;
+    background-color: #CFCFCF;
     width: 100%;
     height: 4px;
     transition: all 300ms ease-out;
@@ -889,6 +907,12 @@ h1{
 
 #hamburguesa.active .linea3{
     transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+
+#hamburguesa.active .linea3Scroll{
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 
@@ -1515,6 +1539,13 @@ input{
 .menuUsuario{
     padding-right: 32px;
     padding-top: 16px;
+    position: unset;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuUsuarioScroll{
+    padding-right: 32px;
     position: unset;
     display: flex;
     flex-direction: row;
