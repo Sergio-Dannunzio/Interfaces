@@ -94,32 +94,61 @@ function reveal() {
   */
 
 let headerEj3 = document.getElementById("header");
-let headerDiv = document.querySelector(".container");
-let inputBuscador = document.getElementById("input");
-let logoUsuario = document.querySelector(".logoUsuario");
-let menuUsuario = document.querySelector(".menuUsuario");
+let buscador = document.querySelector(".buscador");
+let usuario = document.querySelector(".usuario");
 let flecha = document.querySelector(".flecha");
 let hamburguesaScroll = document.querySelector("#hamburguesa");
 let linea1 = document.querySelector(".linea1");
 let linea2 = document.querySelector(".linea2");
 let linea3 = document.querySelector(".linea3");
+let contenedorParallax = document.querySelector(".contenedorParallax");
+let pos = window.pageYOffset;
+
 
 function headerScroll(){
 
-  headerEj3.style.height = "30px";
-  inputBuscador.style.height = "16px";
-  logoUsuario.style.width = "28px";
-  logoUsuario.style.height = "28px";
-  logoUsuario.style.padding = "2px";
+let actual = window.pageYOffset;
+
+if(pos > actual){
+  headerEj3.classList.add("header");
+  headerEj3.classList.remove("headerScroll");
+  contenedorParallax.style.height = "621px";
+
+  buscador.classList.remove("noMostrarTransition");
+  usuario.classList.remove("noMostrarTransition");
+  flecha.classList.remove("noMostrarTransition");
+
+  hamburguesaScroll.classList.remove("hamburguesaScroll");
+  linea1.style.width = "100%";
+  linea2.style.width = "100%";
+  linea3.style.width = "100%";
+  linea3.className = "#hamburguesa.active linea3";
+}else{
+  headerEj3.classList.remove("header");
+  headerEj3.classList.add("headerScroll");
+  contenedorParallax.style.height = "660px";
+
+  buscador.classList.add("noMostrarTransition");
+  buscador.style.transition = "all 2s ease";
+  usuario.classList.add("noMostrarTransition");
+  usuario.style.transition = "all 2s ease";
+  flecha.classList.add("noMostrarTransition");
+  flecha.style.transition = "all 2s ease";
   
-  menuUsuario.className = "menuUsuarioScroll";
-  flecha.className = "flechaScroll";
-  hamburguesaScroll.style.margin = "0px";
-  hamburguesaScroll.style.height = "24px";
+
+  hamburguesaScroll.classList.add("hamburguesaScroll");
   linea1.style.width = "50%";
+  linea1.style.transition = "all 2s ease";
   linea2.style.width = "50%";
+  linea2.style.transition = "all 2s ease";
   linea3.style.width = "50%";
+  linea3.style.transition = "all 2s ease";
   linea3.className = "#hamburguesa.active linea3Scroll";
+
+}
+
+pos = actual;
+
 }
 
 window.addEventListener("scroll", headerScroll);
