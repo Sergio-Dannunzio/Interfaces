@@ -103,6 +103,7 @@ let linea2 = document.querySelector(".linea2");
 let linea3 = document.querySelector(".linea3");
 let contenedorParallax = document.querySelector(".contenedorParallax");
 let historiah1 = document.querySelector(".historiah1");
+let listaCategorias = document.querySelector(".listaCategorias");
 let pos = window.pageYOffset;
 
 let contenedorPersonajes = document.querySelectorAll(".contenedorPersonajes");
@@ -123,6 +124,8 @@ if(pos > actual){
   usuario.classList.remove("noMostrarTransition");
   flecha.classList.remove("noMostrarTransition");
   historiah1.classList.remove("historiah1Scroll");
+  listaCategorias.classList.remove("listaCategoriasScroll");
+  listaCategorias.classList.add("listaCategorias2");
 
   hamburguesaScroll.classList.remove("hamburguesaScroll");
   linea1.style.width = "100%";
@@ -141,6 +144,8 @@ if(pos > actual){
   flecha.classList.add("noMostrarTransition");
   flecha.style.transition = "all 2s ease";
   historiah1.classList.add("historiah1Scroll");
+  listaCategorias.classList.add("listaCategoriasScroll");
+  listaCategorias.classList.remove("listaCategorias2");
 
   hamburguesaScroll.classList.add("hamburguesaScroll");
   linea1.style.width = "50%";
