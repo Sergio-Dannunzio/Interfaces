@@ -1111,7 +1111,7 @@ input:checked + .slide-container .nav label { display: block; }
 
 @keyframes niebla {
     0% {background-position-x: 0px;}
-    100% {background-position-x: -1520px;}
+    100% {background-position-x: -1920px;}
 }
 
 @keyframes front {
