@@ -36,7 +36,7 @@ html{
 /*************HEADER***********************/
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0px;
     background-color: #28043A;
     height: 70px;
@@ -808,7 +808,7 @@ h1{
 /*************CARROUSEL******************/
   
 .carousel {
-    margin-left: 15%;
+    margin-left: 16%;
     margin-right: 15%;
 }
 
@@ -1111,7 +1111,7 @@ input:checked + .slide-container .nav label { display: block; }
 
 @keyframes niebla {
     0% {background-position-x: 0px;}
-    100% {background-position-x: -6100px;}
+    100% {background-position-x: -1520px;}
 }
 
 @keyframes front {
@@ -1138,26 +1138,24 @@ input:checked + .slide-container .nav label { display: block; }
 
 .heroFondo{      
     background-image: url("../img/fondoFuegoTiteable.jpg");   
-    animation: scroll 100s linear infinite;
+    animation: scroll 30s infinite linear;
   }
 
 
 .estrellas{
-    width: 100% ;
-    overflow: hidden;
-    background-image: url("../img/01.png");   
-    animation: niebla 20s linear infinite;
+    background-image: url("../img/01.png");     
+    animation: niebla 8s infinite linear;
 
 }
 
 .estrellas2{
-    opacity: 0.4;
-    min-height: 621px;
-    overflow: hidden;
-    background-image: url("../img/01.png");   
-    animation: niebla 20s linear infinite;
+    opacity: 0.6;
+    background-image: url("../img/01.png");     
+    animation: niebla 8s infinite linear;
 
 }
+
+
 
 
 
@@ -1196,6 +1194,23 @@ input:checked + .slide-container .nav label { display: block; }
     animation: moveVertical 1.5s linear 1s infinite alternate;
 }
 
+/****ej9******/
+
+.ListaPersonajes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 48px;
+}
+.tituloPersonajes{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
 
 .btn_trailer{
     font-size: 16px;
@@ -1248,9 +1263,9 @@ input:checked + .slide-container .nav label { display: block; }
   .btn_trailer:hover::after {
     transform: scale(1, 1);
   }
-  
+
 .mainLanzamiento{
-    height: 2410px;
+   height: 5094px;
 }
 .heroFondo{
     max-width: 100%;
@@ -1292,19 +1307,76 @@ input:checked + .slide-container .nav label { display: block; }
     left: 348px;
 }
 
+.historiah1{
+    margin-top: 96px;
+    margin-left: 32px;
+    margin-bottom: 16px;
+}
+.historiah1Scroll{
+    margin-top: 58px;
+    margin-left: 32px;
+    margin-bottom: 16px;
+}
+
+.contenedorImgHistoria{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(55, 28, 124, 0.6);
+    height: 2300px;
+    width: 100%;
+}
+
+.img-left{
+    margin-top: 4%;
+    /*margin-left: 12%;*/
+    align-self: flex-start;
+    position: sticky;
+    top: 220px;
+}
+.img-left img{
+    margin-left: 8%;
+    border-radius: 8px;
+    width: 80%;
+    animation-name: slideUp;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translatex(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translatex(0%);
+    }
+  }
+
+.historia{
+    width: 800px;
+    height: 425px;
+    margin-top: 17%;
+    margin-bottom: 10%;
+   /* overflow: scroll;
+    background-color: transparent;*/
+}
+
 .contenedorHistoria{
-   
-    height: 406px;
+    height: 2300px;
     margin: 24px;
     margin-top: 16px;
     margin-bottom: 0px;
-    background-color: rgb(55, 28, 124, 0.6);
+    /*background-color: rgb(55, 28, 124, 0.6);*/
     border-radius: 25px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /*justify-content: center;
+    align-items: center;*/
 }
-
+/*
 .historia{
     width: 986px;
     height: 284px;
@@ -1325,10 +1397,11 @@ input:checked + .slide-container .nav label { display: block; }
 .historia::-webkit-scrollbar-thumb {
     background: #F4F4F5;
     border-radius: 8px;
-}
+}*/
 
 .historia p {
     color: #CFCFCF;
+    font-weight: 100;
     background-color: transparent;
 }
 
@@ -1337,6 +1410,7 @@ input:checked + .slide-container .nav label { display: block; }
     height: 240px;
     overflow: hidden;
     margin-left: 24px;
+
 }
 
 
@@ -1666,7 +1740,7 @@ button{
 
     /*************HEADER***********************/
 .header{
-    position: sticky;
+    position: fixed;
     top: 0px;
     background-color: #28043A;
     height: 78px;
@@ -1675,7 +1749,7 @@ button{
     /*transition: all 2s ease;*/
 }
 .headerScroll{
-    position: sticky;
+    position: fixed;
     top: 0px;
     background-color: #28043A;
     height: 50px;

@@ -67,7 +67,7 @@ animación desde afuera de la pantalla y posicionarse en el
 lugar final tal cual el diseño original. Tener en cuenta 
 que es on-scroll.
 ****************************/
-
+  /*
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
   
@@ -86,7 +86,7 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
-  /*
+
   3. Al hacer scroll el Header debe ser sticky y achicarse, 
   de tal manera que además el logo debe achicarse. 
   En caso de ser necesario cambiar el fondo a un 
@@ -102,8 +102,13 @@ let linea1 = document.querySelector(".linea1");
 let linea2 = document.querySelector(".linea2");
 let linea3 = document.querySelector(".linea3");
 let contenedorParallax = document.querySelector(".contenedorParallax");
+let historiah1 = document.querySelector(".historiah1");
 let pos = window.pageYOffset;
 
+let contenedorPersonajes = document.querySelectorAll(".contenedorPersonajes");
+let ListaPersonajes = document.querySelectorAll(".ListaPersonajes");
+
+let reveals = document.querySelectorAll(".reveal");
 
 function headerScroll(){
 
@@ -117,6 +122,7 @@ if(pos > actual){
   buscador.classList.remove("noMostrarTransition");
   usuario.classList.remove("noMostrarTransition");
   flecha.classList.remove("noMostrarTransition");
+  historiah1.classList.remove("historiah1Scroll");
 
   hamburguesaScroll.classList.remove("hamburguesaScroll");
   linea1.style.width = "100%";
@@ -134,7 +140,7 @@ if(pos > actual){
   usuario.style.transition = "all 2s ease";
   flecha.classList.add("noMostrarTransition");
   flecha.style.transition = "all 2s ease";
-  
+  historiah1.classList.add("historiah1Scroll");
 
   hamburguesaScroll.classList.add("hamburguesaScroll");
   linea1.style.width = "50%";
@@ -149,6 +155,62 @@ if(pos > actual){
 
 pos = actual;
 
+contenedorPersonajes.forEach((container,i) => {
+    let top = container.getBoundingClientRect().top - window.innerHeight;
+    if(top > -350){
+      ListaPersonajes[i].style.transform=`translateY(${350+ top}px)`;
+    }
+}) 
+
+
+  
+for (let i = 0; i < reveals.length; i++) {
+  let windowHeight = window.innerHeight;
+  let elementTop = reveals[i].getBoundingClientRect().top;
+  let elementVisible = 150;
+
+  if (elementTop < windowHeight - elementVisible) {
+    reveals[i].classList.add("active");
+  } else {
+    reveals[i].classList.remove("active");
+  }
+}
+
 }
 
 window.addEventListener("scroll", headerScroll);
+
+    let imgLeftFirst = document.querySelector("#img-left-first");
+    let imgLeftSecond = document.querySelector("#img-left-second");
+    let imgLeftThird = document.querySelector("#img-left-third");
+    let imgLeftFourth = document.querySelector("#img-left-fourth");
+    let rightFirst = document.querySelector("#right-first");
+    let rightSecond = document.querySelector("#right-second");
+    let rightThird = document.querySelector("#right-third");
+    let rightFourth = document.querySelector("#right-fourth");
+
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+      if (document.documentElement.scrollTop > 200 && document.documentElement.scrollTop < 900) {
+          imgLeftFirst.className = "img-left";
+          rightFirst.className = "historia";
+      } else {
+          imgLeftFirst.className = "noMostrar";
+      }if (document.documentElement.scrollTop > 900 && document.documentElement.scrollTop < 1600) {
+          imgLeftSecond.className = "img-left";
+          rightSecond.className = "historia";
+      }else{
+          imgLeftSecond.className = "noMostrar";
+      }if (document.documentElement.scrollTop > 1600 && document.documentElement.scrollTop < 2100) {
+          imgLeftThird.className = "img-left";
+          rightThird.className = "historia";
+      }else{
+          imgLeftThird.className = "noMostrar";
+      }if (document.documentElement.scrollTop > 2100 && document.documentElement.scrollTop < 2400) {
+          imgLeftFourth.className = "img-left";
+          rightFourth.className = "historia";
+      }else{
+          imgLeftFourth.className = "noMostrar";
+      }
+    }
