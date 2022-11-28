@@ -1,3 +1,16 @@
+let btnFlechaCategorias = document.getElementById("flecha");
+let btnUsuario = document.getElementById("btnUsuario");
+    function mostrarUsuarioCategorias(){
+      let categorias = document.getElementById("usuarioCategorias");
+      if (categorias.className!="noMostrar") {
+          categorias.className = "noMostrar";
+      }else{
+          categorias.className = "";
+      }
+  }
+  btnUsuario.addEventListener("click" , mostrarUsuarioCategorias);
+  btnFlechaCategorias.addEventListener("click" , mostrarUsuarioCategorias);
+
 let hamburguesa = document.querySelector("#hamburguesa");
     function cruzHamburguesa(){
         let categorias = document.getElementById("categorias");

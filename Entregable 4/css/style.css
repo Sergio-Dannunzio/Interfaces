@@ -1721,6 +1721,8 @@ input:checked + .slide-container .nav label { display: block; }
     width: 140px;
     height: 28%;
     background-color: #644DA4;
+    margin-top: 4.5%;
+    z-index: 6;
 }
 .listaUsuarioCategorias li{
     display: flex;
@@ -1733,6 +1735,7 @@ input:checked + .slide-container .nav label { display: block; }
     font-size: 16px;
     height: 30px;
     color: #F4F4F5;
+    
 }
 .listaUsuarioCategorias li:hover{
     color: #100117;
