@@ -1155,7 +1155,7 @@ input:checked + .slide-container .nav label { display: block; }
     background-repeat: repeat-x;
     background-size: cover;  
     background-image: url("../img/fondoFuegoTiteable.jpg");   
-    animation: scroll 10s infinite linear;
+    animation: scroll 40s infinite linear;
    
   }
 
