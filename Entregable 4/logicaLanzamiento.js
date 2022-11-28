@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let btnAceptarSeleccion= document.getElementById("aceptarSeleccion");
     let btnReset = document.querySelector("#btnReset");
 
-    function mostrarCategorias() {
+   function mostrarCategorias() {
         let categorias = document.getElementById("categorias");
         if (categorias.className!="noMostrar") {
         categorias.className = "noMostrar";
