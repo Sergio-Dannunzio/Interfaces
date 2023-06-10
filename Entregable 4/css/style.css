@@ -26,6 +26,7 @@ body{
     background-color: #100117;
     font-family:  sans-serif;
     color: #CFCFCF;
+    overflow-x: hidden;
 }
 
 html{
@@ -119,6 +120,7 @@ header a .logo{
 .img{
     display: flex;
     height: 70%;
+    margin-left: 12px;
 }
 .img button{
    padding-left: 4%;
@@ -196,15 +198,14 @@ h1{
 }
 
 .containerMortal{
-    width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 16px;
+    margin-left: 16px;
 }
 
 .imgMortal{
-    width: 91%;
+    width: 98%;
 
 }
 
@@ -221,13 +222,13 @@ h1{
     font-weight: 600;
     background: #644DA4;
     border-radius: 16px;
-    width: 20%;
-    height: 5%;
-    top: 30%;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    top: -80px;
+    margin-left: 36px;
     color: #F4F4F5;
     border: 0.25rem solid #644DA4;
-    position: absolute;
-    left: 11.5%;
     z-index: 1;
     overflow: hidden;
   }
@@ -1651,7 +1652,7 @@ input:checked + .slide-container .nav label { display: block; }
     height: 52%;
     background-color: #644DA4;
     z-index: 2;
-    margin-top: 4.5%;
+    margin-top: 70px;
 }
 
 .listaCategoriasJuego{
@@ -1721,7 +1722,7 @@ input:checked + .slide-container .nav label { display: block; }
     width: 140px;
     height: 28%;
     background-color: #644DA4;
-    margin-top: 4.5%;
+    margin-top: 70px;
     z-index: 6;
 }
 .listaUsuarioCategorias li{
@@ -1948,12 +1949,11 @@ h1{
 
 .btnInfo {
     
-    width: 10%;
-    height: 4%;
-   
-    position: absolute;
-    left: 17%;
-    top: 55%
+    width: 162px;
+    height: 36px;
+    margin-left: 226px;
+    top: -155px;
+    position: relative;
 
 
 }
